@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) http://www.rrz.uni-hamburg.de/exmaralda -->
+<basic-transcription>
+<head>
+<meta-information><project-name></project-name><transcription-name></transcription-name><referenced-file url=""/><ud-meta-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>X</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK1">
+<abbreviation>SPK1</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK2">
+<abbreviation>SPK2</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK3">
+<abbreviation>SPK3</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK4">
+<abbreviation>SPK4</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK5">
+<abbreviation>SPK5</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK6">
+<abbreviation>SPK6</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK7">
+<abbreviation>SPK7</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK8">
+<abbreviation>SPK8</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK9">
+<abbreviation>SPK9</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+<speaker id="SPK10">
+<abbreviation>SPK10</abbreviation>
+<sex value="u"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0"/>
+<tli id="T13"/>
+<tli id="T1"/>
+<tli id="T2"/>
+<tli id="T3"/>
+<tli id="T4"/>
+<tli id="T5"/>
+<tli id="T6"/>
+<tli id="T7"/>
+<tli id="T8"/>
+<tli id="T9"/>
+<tli id="T10"/>
+<tli id="T11"/>
+<tli id="T12"/>
+</common-timeline>
+<tier id="TIE8" speaker="SPK0" category="v" type="t" display-name="Fr 64 (Biraschi) &gt; Σ V Il. 12.22 b[v]"><event start="T0" end="T1"><![CDATA[<Σιμόεις>]]></event>
+<event start="T1" end="T2">καὶ</event>
+<event start="T2" end="T3">ἄλλος</event>
+<event start="T3" end="T4">ἐν</event>
+<event start="T4" end="T5">Κρήτῃ</event>
+<event start="T5" end="T6">.</event>
+<event start="T6" end="T7">ἔστι</event>
+<event start="T7" end="T8">δὲ</event>
+<event start="T8" end="T9">μικρὸς</event>
+<event start="T9" end="T10">ὁ</event>
+<event start="T10" end="T11">Σιμοῦς</event>
+<event start="T11" end="T12">.</event>
+</tier><tier id="TIE0" speaker="SPK1" category="v" type="t" display-name="Fr 64 (Gaede) &gt;Σ V ad Il. 12. 22 [v]"><event start="T0" end="T13">Σιμόεις</event>
+<event start="T13" end="T1">:</event>
+<event start="T1" end="T2">καὶ</event>
+<event start="T2" end="T3">ἄλλος</event>
+<event start="T3" end="T4">ἐν</event>
+<event start="T4" end="T5">Κρήτῃ</event>
+<event start="T5" end="T6">.</event>
+<event start="T6" end="T7">ἔστι</event>
+<event start="T7" end="T8">δὲ</event>
+<event start="T8" end="T9">μικρὸς</event>
+<event start="T9" end="T10">ὁ</event>
+<event start="T10" end="T11">Σιμοῦς</event>
+<event start="T11" end="T12">.</event>
+</tier><tier id="TIE1" speaker="SPK2" category="v" type="t" display-name="Pagani &gt; Σ Il. 12, 22 [v]"><event start="T0" end="T13"><![CDATA[<Σιμόεις]]></event>
+<event start="T13" end="T1"><![CDATA[:>]]></event>
+<event start="T1" end="T2">καὶ</event>
+<event start="T2" end="T3">ἄλλος</event>
+<event start="T3" end="T4">ἐν</event>
+<event start="T4" end="T5">Κρήτῃ</event>
+<event start="T5" end="T6">.</event>
+<event start="T6" end="T7">ἔστι</event>
+<event start="T7" end="T8">δὲ</event>
+<event start="T8" end="T9">μικρὸς</event>
+<event start="T9" end="T10">ὁ</event>
+<event start="T10" end="T11">Σιμοῦς</event>
+<event start="T11" end="T12">.</event>
+</tier><tier id="TIE2" speaker="SPK3" category="v" type="t" display-name="Σ T(il) Il. 12.22 (Erbse) b [v]"><event start="T0" end="T13"><![CDATA[<Σιμόεις]]></event>
+<event start="T13" end="T1"><![CDATA[:>]]></event>
+<event start="T1" end="T2">καὶ</event>
+<event start="T2" end="T3">ἄλλος</event>
+<event start="T3" end="T4">ἐν</event>
+<event start="T4" end="T5">Κρήτῃ</event>
+<event start="T5" end="T6">.</event>
+<event start="T6" end="T7">ἔστι</event>
+<event start="T7" end="T8">δὲ</event>
+<event start="T8" end="T9">μικρὸς</event>
+<event start="T9" end="T10">ὁ</event>
+<event start="T10" end="T11">Σιμοῦς</event>
+<event start="T11" end="T12">.</event>
+</tier><tier id="TIE3" speaker="SPK4" category="v" type="t" display-name="Ven A [v]"><event start="T0" end="T1">?</event>
+</tier><tier id="TIE4" speaker="SPK5" category="v" type="t" display-name="Ven B [v]"><event start="T0" end="T1">?</event>
+</tier><tier id="TIE5" speaker="SPK6" category="v" type="t" display-name=" Σ AD Il. 12.22 (Heyne)[v]"><event start="T0" end="T1">other</event>
+<event start="T1" end="T2">Βοάγρια</event>
+</tier><tier id="TIE6" speaker="SPK7" category="v" type="t" display-name="Σ D Il. 12.22 (van Thiel) [v]"><event start="T0" end="T1">other</event>
+<event start="T1" end="T2">Βοάγρια</event>
+</tier><tier id="TIE7" speaker="SPK8" category="v" type="t" display-name="Σ (Gen 1+2) [v]"><event start="T0" end="T1">other</event>
+<event start="T1" end="T2">Βοάγρια</event>
+</tier><tier id="TIE9" speaker="SPK0" category="v" type="t" display-name="linked to Σ. Il. 12 20 (fr 31)[v]"></tier></basic-body>
+<tierformat-table><timeline-item-format show-every-nth-numbering="1" show-every-nth-absolute="1" absolute-time-format="time" miliseconds-digits="1"/><tier-format tierref="EMPTY"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="COLUMN-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">7</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE9"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE8"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE7"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE6"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Bold</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">10</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE5"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE4"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE3"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE2"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE1"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE0"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="EMPTY-EDITOR"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="SUB-ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Right</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">8</property><property name="font-name">Times New Roman</property></tier-format></tierformat-table></basic-transcription>

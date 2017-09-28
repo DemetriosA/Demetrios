@@ -1,0 +1,190 @@
+<?xml-model href="TextInventory.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TextInventory tiid="hmt" tiversion="4.0" xmlns="http://chs.harvard.edu/xmlns/cts/ti"
+    xmlns:dc="http://purl.org/dc/elements/1.1">
+    <ctsnamespace abbr="greekLit" ns="chs.harvard.edu/ctsns/greekLit">
+        <description xml:lang="eng"> The &quot;First Thousand Years of Greek&quot; project's
+            inventory of Greek texts. </description>
+    </ctsnamespace>
+    <ctsnamespace abbr="botcar" ns="folio.furman.edu/ctsns/botcar">
+        <description xml:lang="eng"> Botanica Caroliniana: historical texts on the natural history
+            of the Carolinas. </description>
+    </ctsnamespace>
+    <collection id="fufolio" isdefault="yes">
+        <title xml:lang="eng" xmlns="http://purl.org/dc/elements/1.1/">Texts for research published
+            by Furman University.</title>
+        <creator xmlns="http://purl.org/dc/elements/1.1/"> Christopher W. Blackwell </creator>
+        <coverage xml:lang="eng" xmlns="http://purl.org/dc/elements/1.1/">Texts under editing. </coverage>
+        <description xml:lang="eng" xmlns="http://purl.org/dc/elements/1.1/">Misc. texts in English,
+            French, Greek, and Latin </description>
+        <rights xml:lang="eng" xmlns="http://purl.org/dc/elements/1.1/"> Licensed under the terms of
+            the Creative Commons Attribution-ShareAlike 3.0 Unported license (CC BY-SA 3.0).
+        </rights>
+    </collection>
+    <textgroup urn="urn:cts:greekLit:tlg0020">
+        <groupname xml:lang="eng">Hesiod</groupname>
+        <groupname xml:lang="lat">Hesiodus</groupname>
+        <work urn="urn:cts:greekLit:tlg0020.tlg001" xml:lang="grc">
+            <title xml:lang="eng">Theogony</title>
+            <edition urn="urn:cts:greekLit:tlg0020.tlg001.fu01">
+                <label xml:lang="eng">Greek text (Evelyn-White, 1914)</label>
+                <online docname="hesiod_theogony.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Line" scope="/tei:TEI/tei:text/tei:body/tei:div"
+                            xpath="/tei:l[@n='?']"/>
+                    </citationMapping>
+                </online>
+            </edition>
+        </work>
+        <work urn="urn:cts:greekLit:tlg0020.tlg002" xml:lang="grc">
+            <title xml:lang="eng">Works and Days</title>
+            <edition urn="urn:cts:greekLit:tlg0020.tlg002.fu01">
+                <label xml:lang="eng">Greek text (Evelyn-White, 1914)</label>
+                <online docname="hesiod_wd.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Line" scope="/tei:TEI/tei:text/tei:body/tei:div"
+                            xpath="/tei:l[@n='?']"/>
+                    </citationMapping>
+                </online>
+            </edition>
+        </work>
+    </textgroup>
+    <textgroup urn="urn:cts:botcar:lawson">
+        <groupname xml:lang="eng">John Lawson</groupname>
+        <work urn="urn:cts:botcar:lawson.voyage" xml:lang="eng">
+            <title xml:lang="eng">A New Voyage to Carolina</title>
+            <edition urn="urn:cts:botcar:lawson.voyage.1709">
+                <label xml:lang="eng">1709 ed.</label>
+                <description xml:lang="eng">A New Voyage to Carolina; Containing the Exact
+                    Description and Natural History of That Country: Together with the Present State
+                    Thereof. And A Journal of a Thousand Miles, Travel’d Thro’ Several Nations of
+                    Indians. Giving a Particular Account of Their Customs, Manners, &amp;c. Based on
+                    the 2001 digital transcription of this Public Domain work by the University of
+                    North Carolina, with funding from the Institute for Museum and Library Services;
+                    Apex Data Services, Inc., Melissa Graham Meeks and Natalia Smith.</description>
+                <online docname="Lawson.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Section" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@n='?']">
+                            <citation label="Paragraph"
+                                scope="/tei:TEI/tei:text/tei:body/tei:div[@n='?']"
+                                xpath="/tei:p[@n='?']"/>
+                        </citation>
+                        <citation label="Section" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@n='?']">
+                            <citation label="Paragraph"
+                                scope="/tei:TEI/tei:text/tei:body/tei:div[@n='?']"
+                                xpath="/tei:note[@n='?']"/>
+                        </citation>
+                    </citationMapping>
+                </online>
+            </edition>
+        </work>
+    </textgroup>
+    <textgroup urn="urn:cts:greekLit:tlg0031">
+        <groupname xml:lang="eng">New Testament</groupname>
+        <groupname xml:lang="lat">Novum Testamentum</groupname>
+        <work urn="urn:cts:greekLit:tlg0031.tlg001" xml:lang="grc">
+            <title xml:lang="eng">The Gospel According to Matthew</title>
+            <title xml:lang="lat">Evangelium secundum Matthaeum</title>
+            <title xml:lang="grc">ΚΑΤΑ ΜΑΘΘΑΙΟΝ</title>
+            <edition urn="urn:cts:greekLit:tlg0031.tlg001.fugnt001">
+                <label xml:lang="eng">Westcott and Hort - Matthew</label>
+                <description xml:lang="eng">Mathew - Based on Wescott and Hort, from the Perseus
+                    Digital Library text.</description>
+                <online docname="WH_Matthew.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Chapter" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@type='chapter' and @n='?']">
+                            <citation label="verse"
+                                scope="/tei:TEI/tei:text/tei:body/tei:div[@type='chapter' and @n='?']"
+                                xpath="/tei:div[@type='verse' and @n='?']"/>
+                        </citation>
+                    </citationMapping>
+                </online>
+            </edition>
+            <translation urn="urn:cts:greekLit:tlg0031.tlg001.fu001" xml:lang="eng">
+                <label xml:lang="eng">The King James Version - Matthew</label>
+                <description xml:lang="eng">Mathew - The KJV, from the Project Gutenberg
+                    text.</description>
+                <online docname="KJV_Matthew.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Chapter" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@type='chapter' and @n='?']">
+                            <citation label="Verse"
+                                scope="/tei:TEI/tei:text/tei:body/tei:div[@type='chapter' and @n='?']"
+                                xpath="/tei:div[@type='verse' and @n='?']"/>
+                        </citation>
+                    </citationMapping>
+                </online>
+            </translation>
+            <translation urn="urn:cts:greekLit:tlg0031.tlg001.fu002" xml:lang="lat">
+                <label xml:lang="lat">Biblia Sacra, Vulgata Editionis - Matthew</label>
+                <description xml:lang="eng">The Latin Vulgate</description>
+                <online docname="Vulgate_Matthew.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Chapter" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@type='chapter' and @n='?']">
+                            <citation label="verse"
+                                scope="/tei:TEI/tei:text/tei:body/tei:div[@type='chapter' and @n='?']"
+                                xpath="/tei:div[@type='verse' and @n='?']"/>
+                        </citation>
+                    </citationMapping>
+                </online>
+            </translation>
+        </work>
+    </textgroup>
+
+    <textgroup urn="urn:cts:greekLit:tlg4028">
+        <groupname xml:lang="eng">Stephanus of Byzantium</groupname>
+        <work urn="urn:cts:greekLit:tlg4028.tlg001" xml:lang="grc">
+            <title xml:lang="lat">Ethnica</title>
+            <edition urn="urn:cts:greekLit:tlg4028.tlg001.chs01">
+                <label xml:lang="eng">Digital edition by Neel Smith</label>
+                <online docname="StephByz-p5.xml">
+                    <validate schema="chstei.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>
+                        <citation label="Entry" scope="/tei:TEI/tei:text/tei:body"
+                            xpath="/tei:div[@n = '?']"/>
+                    </citationMapping>
+                </online>
+            </edition>
+            <edition urn="urn:cts:greekLit:tlg4028.tlg001.meineke">
+                <label xml:lang="eng">Meineke's edition of 1849</label>
+            </edition>
+            <edition urn="urn:cts:greekLit:tlg4028.tlg001.billerbeck">
+                <label xml:lang="eng">Billerbeck's edition of 2009-, not yet completed</label>
+            </edition>
+        </work>
+    </textgroup>
+    <textgroup urn="urn:cts:greekLit:tlg0099">
+        <groupname xml:lang="eng">Strabo</groupname>
+        <work urn="urn:cts:greekLit:tlg0099.tlg001" xml:lang="grec">
+            <title xml:lang="eng">Geography</title>
+            <edition urn="urn:cts:greekLit:tlg0099.tlg001.radt">
+                <label xml:lang="eng">Stephan Radt's edition of Strabo, Göttingen 2001-2010</label>
+            </edition>
+            <edition urn="urn:cts:greekLit:tlg0099.tlg001.perseus-grc1">
+                <label xml:lang="eng">Meineke's edition if Strabo, Leipzig 1877, as found in the
+                    Perseus Library</label>
+            </edition>
+            <edition urn="urn:cts:greekLit:tlg0099.tlg001.gaede">
+                <label xml:lang="eng">The text of Strabo as quoted in Gaede's edition of Demetrios
+                    of Scepsis</label>
+            </edition>
+        </work>
+    </textgroup>
+
+</TextInventory>

@@ -1,0 +1,3086 @@
+default namespace = "http://www.tei-c.org/ns/1.0"
+namespace a = "http://relaxng.org/ns/compatibility/annotations/1.0"
+namespace ns1 = "http://www.isocat.org/ns/dcr"
+namespace rng = "http://relaxng.org/ns/structure/1.0"
+namespace sch = "http://purl.oclc.org/dsdl/schematron"
+namespace xlink = "http://www.w3.org/1999/xlink"
+
+# Schema generated from ODD source 2013-04-15T12:59:06Z. 
+# Edition: 2.3.0. Last updated on 17th January 2013.
+# Edition Location: http://www.tei-c.org/Vault/P5/2.3.0/
+#
+
+# This template file is freely available and you are hereby authorised to copy, modify, and redistribute it in any way without further reference or permissions.When making such modifications, you are strongly recommended to change the present text to include an accurate statement of the licencing conditions applicable to your modified text.
+macro.paraContent =
+  (text | model.gLike | model.phrase | model.inter | model.global | lg)*
+macro.limitedContent = (text | model.limitedPhrase | model.inter)*
+macro.phraseSeq = (text | model.gLike | model.phrase | model.global)*
+macro.phraseSeq.limited = (text | model.limitedPhrase | model.global)*
+macro.specialPara =
+  (text
+   | model.gLike
+   | model.phrase
+   | model.inter
+   | model.divPart
+   | model.global)*
+macro.xtext = (text | model.gLike)*
+data.certainty = "high" | "medium" | "low" | "unknown"
+data.probability = xsd:double { minInclusive = "0" maxInclusive = "1" }
+data.numeric =
+  xsd:double
+  | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+  | xsd:decimal
+data.count = xsd:nonNegativeInteger
+data.temporal.w3c =
+  xsd:date
+  | xsd:gYear
+  | xsd:gMonth
+  | xsd:gDay
+  | xsd:gYearMonth
+  | xsd:gMonthDay
+  | xsd:time
+  | xsd:dateTime
+data.xTruthValue = xsd:boolean | "unknown" | "inapplicable"
+data.language = xsd:language
+data.pointer = xsd:anyURI
+data.version = xsd:token { pattern = "[\d]+(\.[\d]+){0,2}" }
+data.word = xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+data.text = xsd:string
+data.code = data.word
+data.name = xsd:Name
+data.enumerated = data.name
+data.temporal.iso =
+  xsd:date
+  | xsd:gYear
+  | xsd:gMonth
+  | xsd:gDay
+  | xsd:gYearMonth
+  | xsd:gMonthDay
+  | xsd:time
+  | xsd:dateTime
+  | xsd:token { pattern = "[0-9.,DHMPRSTWYZ/:+\-]+" }
+att.ascribed.attributes = att.ascribed.attribute.who
+att.ascribed.attribute.who =
+  
+  ## indicates the person, or group of people, to whom the element content is ascribed.
+  attribute who {
+    list { data.pointer+ }
+  }?
+att.canonical.attributes =
+  att.canonical.attribute.key, att.canonical.attribute.ref
+att.canonical.attribute.key =
+  
+  ## provides an externally-defined means of identifying the entity (or entities) being named, using a coded value of some kind.
+  attribute key { data.text }?
+att.canonical.attribute.ref =
+  
+  ## (reference) provides an explicit means of locating a full definition for the entity being named by means of one or more URIs.
+  attribute ref {
+    list { data.pointer+ }
+  }?
+att.ranging.attributes =
+  att.ranging.attribute.atLeast,
+  att.ranging.attribute.atMost,
+  att.ranging.attribute.min,
+  att.ranging.attribute.max,
+  att.ranging.attribute.confidence
+att.ranging.attribute.atLeast =
+  
+  ## gives a minimum estimated value for the approximate measurement.
+  attribute atLeast { data.numeric }?
+att.ranging.attribute.atMost =
+  
+  ## gives a maximum estimated value for the approximate measurement.
+  attribute atMost { data.numeric }?
+att.ranging.attribute.min =
+  
+  ## where the measurement summarizes more than one observation or a range, supplies the minimum value observed.
+  attribute min { data.numeric }?
+att.ranging.attribute.max =
+  
+  ## where the measurement summarizes more than one observation or a range, supplies the maximum value observed.
+  attribute max { data.numeric }?
+att.ranging.attribute.confidence =
+  
+  ## specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by min and max, or the proportion of observed values that fall within that range.
+  attribute confidence { data.probability }?
+att.dimensions.attributes =
+  att.ranging.attributes,
+  att.dimensions.attribute.unit,
+  att.dimensions.attribute.quantity,
+  att.dimensions.attribute.extent,
+  att.dimensions.attribute.precision,
+  att.dimensions.attribute.scope
+att.dimensions.attribute.unit =
+  
+  ## names the unit used for the measurement
+  ## Suggested values include: 1] cm(centimetres) ; 2] mm(millimetres) ; 3] in(inches) ; 4] lines; 5] chars(characters) 
+  attribute unit {
+    
+    ## (centimetres) 
+    "cm"
+    | 
+      ## (millimetres) 
+      "mm"
+    | 
+      ## (inches) 
+      "in"
+    | 
+      ## lines of text
+      "lines"
+    | 
+      ## (characters) characters of text
+      "chars"
+    | xsd:Name
+  }?
+att.dimensions.attribute.quantity =
+  
+  ## specifies the length in the units specified
+  attribute quantity { data.numeric }?
+att.dimensions.attribute.extent =
+  
+  ## indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words. 
+  attribute extent { data.text }?
+att.dimensions.attribute.precision =
+  
+  ## characterizes the precision of the values specified by the other attributes.
+  attribute precision { data.certainty }?
+att.dimensions.attribute.scope =
+  
+  ## where the measurement summarizes more than one observation, specifies the applicability of this measurement.
+  ## Sample values include: 1] all; 2] most; 3] range
+  attribute scope { data.enumerated }?
+att.datable.w3c.attribute.when =
+  
+  ## supplies the value of the date or time in a standard form, e.g. yyyy-mm-dd.
+  attribute when { data.temporal.w3c }?
+att.datable.w3c.attribute.notBefore =
+  
+  ## specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notBefore { data.temporal.w3c }?
+att.datable.w3c.attribute.notAfter =
+  
+  ## specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notAfter { data.temporal.w3c }?
+att.datable.w3c.attribute.from =
+  
+  ## indicates the starting point of the period in standard form, e.g. yyyy-mm-dd.
+  attribute from { data.temporal.w3c }?
+att.datable.w3c.attribute.to =
+  
+  ## indicates the ending point of the period in standard form, e.g. yyyy-mm-dd.
+  attribute to { data.temporal.w3c }?
+att.datable.attribute.calendar =
+  
+  ## indicates the system or calendar to which the date represented by the content of this element belongs.
+  attribute calendar { data.pointer }?
+sch:pattern [
+  id = "calendar-constraint-calendar"
+  "\x{a}" ~
+  "      "
+  sch:rule [
+    context = "tei:*[@calendar]"
+    "\x{a}" ~
+    "            "
+    sch:assert [
+      test = "string-length(.) gt 0"
+      "\x{a}" ~
+      "@calendar indicates the system or calendar to which the date represented by the content of this element\x{a}" ~
+      "belongs, but this "
+      sch:name [ ]
+      " element has no textual content."
+    ]
+    "\x{a}" ~
+    "          "
+  ]
+  "\x{a}" ~
+  "   "
+]
+att.datable.attribute.period =
+  
+  ## supplies a pointer to some location defining a named period of time within which the datable item is understood to have occurred.
+  attribute period { data.pointer }?
+att.datcat.attribute.datcat =
+  
+  ## contains a PID (persistent identifier) that aligns the given element with the appropriate Data Category (or categories) in ISOcat.
+  attribute ns1:datcat {
+    list { data.pointer+ }
+  }?
+att.datcat.attribute.valueDatcat =
+  
+  ## contains a PID (persistent identifier) that aligns the content of the given element or the value of the given attribute with the appropriate simple Data Category (or categories) in ISOcat.
+  attribute ns1:valueDatcat {
+    list { data.pointer+ }
+  }?
+att.responsibility.attributes =
+  att.responsibility.attribute.cert, att.responsibility.attribute.resp
+att.responsibility.attribute.cert =
+  
+  ## (certainty) signifies the degree of certainty associated with the intervention or interpretation.
+  attribute cert { data.certainty }?
+att.responsibility.attribute.resp =
+  
+  ## (responsible party) indicates the agency responsible for the intervention or interpretation, for example an editor or transcriber.
+  attribute resp {
+    list { data.pointer+ }
+  }?
+att.editLike.attribute.evidence =
+  
+  ## indicates the nature of the evidence supporting the reliability or accuracy of the intervention or interpretation.
+  ## Suggested values include: 1] internal; 2] external; 3] conjecture
+  attribute evidence {
+    list {
+      (
+       ## there is internal evidence to support the intervention.
+       "internal"
+       | 
+         ## there is external evidence to support the intervention.
+         "external"
+       | 
+         ## the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.
+         "conjecture"
+       | xsd:Name)+
+    }
+  }?
+att.editLike.attribute.source =
+  
+  ## contains a list of one or more pointers indicating sources supporting the given intervention or interpretation.
+  attribute source {
+    list { data.pointer+ }
+  }?
+att.editLike.attribute.instant =
+  
+  ## indicates whether this is an instant revision or not.
+  [ a:defaultValue = "false" ] attribute instant { data.xTruthValue }?
+att.global.attribute.xmlid =
+  
+  ## (identifier) provides a unique identifier for the element bearing the attribute.
+  attribute xml:id { xsd:ID }?
+att.global.attribute.n =
+  
+  ## (number) gives a number (or other label) for an element, which is not necessarily unique within the document.
+  attribute n { data.text }?
+att.global.attribute.xmllang =
+  
+  ## (language) indicates the language of the element content using a tag generated according to BCP 47.
+  attribute xml:lang { data.language }?
+att.global.attribute.style =
+  
+  ## contains an expression in some formal style definition language which defines the rendering or presentation used for this element in the source text 
+  attribute style { data.text }?
+att.global.attribute.rendition =
+  
+  ## points to a description of the rendering or presentation used for this element in the source text.
+  attribute rendition {
+    list { data.pointer+ }
+  }?
+att.naming.attributes =
+  att.canonical.attributes,
+  att.naming.attribute.role,
+  att.naming.attribute.nymRef
+att.naming.attribute.role =
+  
+  ## may be used to specify further information about the entity referenced by this name, for example the occupation of a person, or the status of a place. 
+  attribute role { data.enumerated }?
+att.naming.attribute.nymRef =
+  
+  ## (reference to the canonical name) provides a means of locating the canonical form (nym) of the names associated with the object named by the element bearing it.
+  attribute nymRef {
+    list { data.pointer+ }
+  }?
+att.typed.attributes =
+  att.typed.attribute.type, att.typed.attribute.subtype
+att.typed.attribute.type =
+  
+  ## characterizes the element in some sense, using any convenient classification scheme or typology.
+  attribute type { data.enumerated }?
+att.typed.attribute.subtype =
+  
+  ## provides a sub-categorization of the element, if needed
+  attribute subtype { data.enumerated }?
+att.pointing.attribute.targetLang =
+  
+  ## specifies the language of the content to be found at the destination referenced by target, using a language tag generated according to BCP 47.
+  attribute targetLang { data.language }?
+sch:pattern [
+  id = "targetLang-constraint-targetLang"
+  "\x{a}" ~
+  "      "
+  sch:rule [
+    context = "tei:*[not(self::tei:schemaSpec)][@targetLang]"
+    "\x{a}" ~
+    "            "
+    sch:assert [
+      test = "count(@target)"
+      "@targetLang can only be used if @target is specified."
+    ]
+    "\x{a}" ~
+    "          "
+  ]
+  "\x{a}" ~
+  "   "
+]
+att.pointing.attribute.target =
+  
+  ## specifies the destination of the reference by supplying one or more URI References
+  attribute target {
+    list { data.pointer+ }
+  }?
+att.pointing.attribute.evaluate =
+  
+  ## specifies the intended meaning when the target of a pointer is itself a pointer.
+  attribute evaluate {
+    
+    ## if the element pointed to is itself a pointer, then the target of that pointer will be taken, and so on, until an element is found which is not a pointer.
+    "all"
+    | 
+      ## if the element pointed to is itself a pointer, then its target (whether a pointer or not) is taken as the target of this pointer.
+      "one"
+    | 
+      ## no further evaluation of targets is carried out beyond that needed to find the element specified in the pointer's target.
+      "none"
+  }?
+att.pointing.group.attribute.domains =
+  
+  ## optionally specifies the identifiers of the elements within which all elements indicated by the contents of this element lie.
+  attribute domains {
+    list { data.pointer, data.pointer, data.pointer* }
+  }?
+att.scoping.attribute.target =
+  
+  ## points at one or several elements or sets of elements by means of one or more data pointers, using the URI syntax.
+  attribute target {
+    list { data.pointer+ }
+  }?
+att.sortable.attributes = att.sortable.attribute.sortKey
+att.sortable.attribute.sortKey =
+  
+  ## supplies the sort key for this element in an index, list or group which contains it.
+  attribute sortKey { data.word }?
+sch:pattern [
+  id = "spanTo-constraint-spanTo-2"
+  "\x{a}" ~
+  "      "
+  sch:rule [
+    context = "tei:*[@spanTo]"
+    "\x{a}" ~
+    "         "
+    sch:assert [
+      test = "following::*[@xml:id=substring(current()/@target,2)]"
+      "\x{a}" ~
+      "The element indicated by @spanTo must follow the current element "
+      sch:name [ ]
+      "\x{a}" ~
+      "         "
+    ]
+    "\x{a}" ~
+    "      "
+  ]
+  "\x{a}" ~
+  "   "
+]
+sch:pattern [
+  id = "spanTo-constraint-spanTo-3"
+  "\x{a}" ~
+  "      "
+  sch:rule [
+    context = "tei:*[@spanTo]"
+    "\x{a}" ~
+    "         "
+    sch:assert [
+      test = "id(substring(@spanTo,2))"
+      "\x{a}" ~
+      "@spanTo on "
+      sch:name [ ]
+      " must point to  the identifier of some element  in this document"
+    ]
+    "\x{a}" ~
+    "      "
+  ]
+  "\x{a}" ~
+  "   "
+]
+att.transcriptional.attribute.cause =
+  
+  ## documents the presumed cause for the intervention.
+  attribute cause {
+    
+    ## repeated for the purpose of fixation
+    "fix"
+    | 
+      ## repeated to clarify a previously illegible or badly written text or mark
+      "unclear"
+  }?
+model.nameLike.agent = name | orgName | persName
+model.nameLike.agent_alternation = name | orgName | persName
+model.nameLike.agent_sequence = name, orgName, persName
+model.nameLike.agent_sequenceOptional = name?, orgName?, persName?
+model.nameLike.agent_sequenceOptionalRepeatable =
+  name*, orgName*, persName*
+model.nameLike.agent_sequenceRepeatable = name+, orgName+, persName+
+model.segLike = seg
+model.emphLike = foreign | distinct | gloss | term | title
+model.emphLike_alternation = foreign | distinct | gloss | term | title
+model.emphLike_sequence = foreign, distinct, gloss, term, title
+model.emphLike_sequenceOptional =
+  foreign?, distinct?, gloss?, term?, title?
+model.emphLike_sequenceOptionalRepeatable =
+  foreign*, distinct*, gloss*, term*, title*
+model.emphLike_sequenceRepeatable =
+  foreign+, distinct+, gloss+, term+, title+
+model.highlighted = model.emphLike
+model.dateLike = date
+model.dateLike_alternation = date
+model.dateLike_sequence = date
+model.dateLike_sequenceOptional = date?
+model.dateLike_sequenceOptionalRepeatable = date*
+model.dateLike_sequenceRepeatable = date+
+model.measureLike = num
+model.measureLike_alternation = num
+model.measureLike_sequence = num
+model.measureLike_sequenceOptional = num?
+model.measureLike_sequenceOptionalRepeatable = num*
+model.measureLike_sequenceRepeatable = num+
+model.egLike = notAllowed
+model.egLike_alternation = notAllowed
+model.egLike_sequence = empty
+model.egLike_sequenceOptional = empty
+model.egLike_sequenceOptionalRepeatable = empty
+model.egLike_sequenceRepeatable = notAllowed
+model.offsetLike = offset | geogFeat
+model.offsetLike_alternation = offset | geogFeat
+model.offsetLike_sequence = offset, geogFeat
+model.offsetLike_sequenceOptional = offset?, geogFeat?
+model.offsetLike_sequenceOptionalRepeatable = offset*, geogFeat*
+model.offsetLike_sequenceRepeatable = offset+, geogFeat+
+model.pPart.editorial = choice | abbr | expan
+model.pPart.editorial_alternation = choice | abbr | expan
+model.pPart.editorial_sequence = choice, abbr, expan
+model.pPart.editorial_sequenceOptional = choice?, abbr?, expan?
+model.pPart.editorial_sequenceOptionalRepeatable =
+  choice*, abbr*, expan*
+model.pPart.editorial_sequenceRepeatable = choice+, abbr+, expan+
+model.pPart.transcriptional = sic | corr | orig | add | del | app
+model.pPart.transcriptional_alternation =
+  sic | corr | orig | add | del | app
+model.pPart.transcriptional_sequence = sic, corr, orig, add, del, app
+model.pPart.transcriptional_sequenceOptional =
+  sic?, corr?, orig?, add?, del?, app?
+model.pPart.transcriptional_sequenceOptionalRepeatable =
+  sic*, corr*, orig*, add*, del*, app*
+model.pPart.transcriptional_sequenceRepeatable =
+  sic+, corr+, orig+, add+, del+, app+
+model.pPart.edit = model.pPart.editorial | model.pPart.transcriptional
+model.ptrLike = ptr | ref
+model.lPart = caesura
+model.global.meta = certainty | link | linkGrp | join | joinGrp
+model.milestoneLike = lb | anchor
+model.gLike = notAllowed
+model.biblLike = bibl | listRelation | relationGrp
+model.biblLike_alternation = bibl | listRelation | relationGrp
+model.biblLike_sequence = bibl, listRelation, relationGrp
+model.biblLike_sequenceOptional = bibl?, listRelation?, relationGrp?
+model.biblLike_sequenceOptionalRepeatable =
+  bibl*, listRelation*, relationGrp*
+model.biblLike_sequenceRepeatable = bibl+, listRelation+, relationGrp+
+model.headLike = head
+model.headLike_alternation = head
+model.headLike_sequence = head
+model.headLike_sequenceOptional = head?
+model.headLike_sequenceOptionalRepeatable = head*
+model.headLike_sequenceRepeatable = head+
+model.labelLike = desc
+model.labelLike_alternation = desc
+model.labelLike_sequence = desc
+model.labelLike_sequenceOptional = desc?
+model.labelLike_sequenceOptionalRepeatable = desc*
+model.labelLike_sequenceRepeatable = desc+
+model.listLike =
+  \list
+  | listBibl
+  | listOrg
+  | listEvent
+  | listPerson
+  | listPlace
+  | listNym
+  | listApp
+model.listLike_alternation =
+  \list
+  | listBibl
+  | listOrg
+  | listEvent
+  | listPerson
+  | listPlace
+  | listNym
+  | listApp
+model.listLike_sequence =
+  \list,
+  listBibl,
+  listOrg,
+  listEvent,
+  listPerson,
+  listPlace,
+  listNym,
+  listApp
+model.listLike_sequenceOptional =
+  \list?,
+  listBibl?,
+  listOrg?,
+  listEvent?,
+  listPerson?,
+  listPlace?,
+  listNym?,
+  listApp?
+model.listLike_sequenceOptionalRepeatable =
+  \list*,
+  listBibl*,
+  listOrg*,
+  listEvent*,
+  listPerson*,
+  listPlace*,
+  listNym*,
+  listApp*
+model.listLike_sequenceRepeatable =
+  \list+,
+  listBibl+,
+  listOrg+,
+  listEvent+,
+  listPerson+,
+  listPlace+,
+  listNym+,
+  listApp+
+model.noteLike = note
+model.lLike = l
+model.lLike_alternation = l
+model.lLike_sequence = l
+model.lLike_sequenceOptional = l?
+model.lLike_sequenceOptionalRepeatable = l*
+model.lLike_sequenceRepeatable = l+
+model.pLike = p | ab
+model.pLike_alternation = p | ab
+model.pLike_sequence = p, ab
+model.pLike_sequenceOptional = p?, ab?
+model.pLike_sequenceOptionalRepeatable = p*, ab*
+model.pLike_sequenceRepeatable = p+, ab+
+model.stageLike = notAllowed
+model.stageLike_alternation = notAllowed
+model.stageLike_sequence = empty
+model.stageLike_sequenceOptional = empty
+model.stageLike_sequenceOptionalRepeatable = empty
+model.stageLike_sequenceRepeatable = notAllowed
+model.entryPart = notAllowed
+model.global.edit = gap
+model.divPart = model.lLike | model.pLike | lg
+model.persStateLike = persName | affiliation | floruit | state | trait
+model.persEventLike = event | listEvent
+model.personLike = org | person
+model.personPart =
+  model.persStateLike | model.persEventLike | bibl | idno
+model.placeNamePart =
+  placeName | country | region | district | settlement | geogName
+model.placeNamePart_alternation =
+  placeName | country | region | district | settlement | geogName
+model.placeNamePart_sequence =
+  placeName, country, region, district, settlement, geogName
+model.placeNamePart_sequenceOptional =
+  placeName?, country?, region?, district?, settlement?, geogName?
+model.placeNamePart_sequenceOptionalRepeatable =
+  placeName*, country*, region*, district*, settlement*, geogName*
+model.placeNamePart_sequenceRepeatable =
+  placeName+, country+, region+, district+, settlement+, geogName+
+model.placeStateLike =
+  model.placeNamePart | location | state | terrain | trait
+model.placeStateLike_alternation =
+  model.placeNamePart_alternation | location | state | terrain | trait
+model.placeStateLike_sequence =
+  model.placeNamePart_sequence, location, state, terrain, trait
+model.placeStateLike_sequenceOptional =
+  model.placeNamePart_sequenceOptional?,
+  location?,
+  state?,
+  terrain?,
+  trait?
+model.placeStateLike_sequenceOptionalRepeatable =
+  model.placeNamePart_sequenceOptionalRepeatable*,
+  location*,
+  state*,
+  terrain*,
+  trait*
+model.placeStateLike_sequenceRepeatable =
+  model.placeNamePart_sequenceRepeatable+,
+  location+,
+  state+,
+  terrain+,
+  trait+
+model.placeEventLike = event
+model.orgPart = listOrg | listPerson | listPlace
+model.publicationStmtPart =
+  address | date | publisher | authority | idno | availability
+model.availabilityPart = notAllowed
+model.certLike = certainty
+model.descLike = desc
+model.glossLike = gloss
+model.quoteLike = quote | cit
+model.quoteLike_alternation = quote | cit
+model.quoteLike_sequence = quote, cit
+model.quoteLike_sequenceOptional = quote?, cit?
+model.quoteLike_sequenceOptionalRepeatable = quote*, cit*
+model.quoteLike_sequenceRepeatable = quote+, cit+
+model.qLike = model.quoteLike | said | q | floatingText
+model.qLike_alternation =
+  model.quoteLike_alternation | said | q | floatingText
+model.qLike_sequence = model.quoteLike_sequence, said, q, floatingText
+model.qLike_sequenceOptional =
+  model.quoteLike_sequenceOptional?, said?, q?, floatingText?
+model.qLike_sequenceOptionalRepeatable =
+  model.quoteLike_sequenceOptionalRepeatable*, said*, q*, floatingText*
+model.qLike_sequenceRepeatable =
+  model.quoteLike_sequenceRepeatable+, said+, q+, floatingText+
+model.respLike = author | editor | respStmt | funder
+model.divTopPart = model.headLike
+model.divTop = model.divTopPart
+model.divBottom = notAllowed
+model.choicePart = sic | corr | orig | abbr | expan | seg
+model.imprintPart = publisher | biblScope
+model.addressLike = address | affiliation
+model.addressLike_alternation = address | affiliation
+model.addressLike_sequence = address, affiliation
+model.addressLike_sequenceOptional = address?, affiliation?
+model.addressLike_sequenceOptionalRepeatable = address*, affiliation*
+model.addressLike_sequenceRepeatable = address+, affiliation+
+model.nameLike =
+  model.nameLike.agent
+  | model.offsetLike
+  | model.placeStateLike
+  | rs
+  | idno
+  | model.persNamePart
+model.nameLike_alternation =
+  model.nameLike.agent_alternation
+  | model.offsetLike_alternation
+  | model.placeStateLike_alternation
+  | rs
+  | idno
+  | model.persNamePart_alternation
+model.nameLike_sequence =
+  model.nameLike.agent_sequence,
+  model.offsetLike_sequence,
+  model.placeStateLike_sequence,
+  rs,
+  idno,
+  model.persNamePart_sequence
+model.nameLike_sequenceOptional =
+  model.nameLike.agent_sequenceOptional?,
+  model.offsetLike_sequenceOptional?,
+  model.placeStateLike_sequenceOptional?,
+  rs?,
+  idno?,
+  model.persNamePart_sequenceOptional?
+model.nameLike_sequenceOptionalRepeatable =
+  model.nameLike.agent_sequenceOptionalRepeatable*,
+  model.offsetLike_sequenceOptionalRepeatable*,
+  model.placeStateLike_sequenceOptionalRepeatable*,
+  rs*,
+  idno*,
+  model.persNamePart_sequenceOptionalRepeatable*
+model.nameLike_sequenceRepeatable =
+  model.nameLike.agent_sequenceRepeatable+,
+  model.offsetLike_sequenceRepeatable+,
+  model.placeStateLike_sequenceRepeatable+,
+  rs+,
+  idno+,
+  model.persNamePart_sequenceRepeatable+
+model.global =
+  model.global.meta
+  | model.milestoneLike
+  | model.noteLike
+  | model.global.edit
+model.biblPart =
+  model.respLike | model.imprintPart | citedRange | bibl | edition
+model.addrPart = model.nameLike | addrLine
+model.pPart.data =
+  model.dateLike
+  | model.measureLike
+  | model.addressLike
+  | model.nameLike
+model.inter =
+  model.egLike
+  | model.biblLike
+  | model.labelLike
+  | model.listLike
+  | model.stageLike
+  | model.qLike
+model.common = model.divPart | model.inter
+model.phrase =
+  model.segLike
+  | model.highlighted
+  | model.pPart.edit
+  | model.ptrLike
+  | model.lPart
+  | model.pPart.data
+model.limitedPhrase =
+  model.emphLike
+  | model.pPart.editorial
+  | model.ptrLike
+  | model.pPart.data
+model.divLike = \div
+model.divGenLike = notAllowed
+model.div1Like = notAllowed
+model.teiHeaderPart = encodingDesc | profileDesc
+model.sourceDescPart = notAllowed
+model.encodingDescPart = projectDesc
+model.profileDescPart = langUsage
+att.source.attributes = att.source.attribute.source
+att.source.attribute.source =
+  
+  ##  (pointer to a bibliographical source reference) provides a pointer to the bibliographical source from which a quotation or citation is drawn.
+  attribute source {
+    list { data.pointer+ }
+  }?
+model.resourceLike = notAllowed
+att.personal.attribute.sort =
+  
+  ## specifies the sort order of the name component in relation to others within the name.
+  attribute sort { data.count }?
+model.placeLike = place
+p =
+  
+  ## (paragraph) marks paragraphs in prose. [3.1.  7.2.5. ]
+  element p {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    empty
+  }
+foreign =
+  
+  ## (foreign) identifies a word or phrase as belonging to some language other than that of the surrounding text.  [3.3.2.1. ]
+  element foreign {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+distinct =
+  
+  ## identifies any word or phrase which is regarded as linguistically distinct, for example as archaic, technical, dialectal, non-preferred, etc., or as forming part of a sublanguage.  [3.3.2.3. ]
+  element distinct {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.attribute.style,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    
+    ## specifies the sublanguage or register to which the word or phrase is being assigned
+    attribute type { data.enumerated }?,
+    
+    ## specifies how the phrase is distinct diachronically
+    attribute time { data.text }?,
+    empty
+  }
+said =
+  
+  ## (speech or thought) indicates passages thought or spoken aloud, whether explicitly indicated in the source or not, whether directly or indirectly reported, whether by real people or fictional characters. [3.3.3. ]
+  element said {
+    macro.specialPara,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.ascribed.attributes,
+    empty
+  }
+quote =
+  
+  ## (quotation) contains a phrase or passage attributed by the narrator or author to some agency external to the text. [3.3.3.  4.3.1. ]
+  element quote {
+    macro.specialPara,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    att.source.attributes,
+    empty
+  }
+q =
+  
+  ## (quoted) contains material which is distinguished from the surrounding text using quotation marks or a similar method, for any one of a variety of reasons including, but not limited to: direct speech or thought, technical terms or jargon, authorial distance, quotations from elsewhere, and passages that are mentioned but not used. [3.3.3. ]
+  element q {
+    macro.specialPara,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.ascribed.attributes,
+    
+    ## may be used to indicate whether the offset passage is spoken or thought, or to characterize it more finely.
+    ## Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] foreign(foreign words) ; 6] distinct(linguistically distinct) ; 7] term(technical term) ; 8] emph(rhetorically emphasized) ; 9] mentioned
+    attribute type {
+      
+      ## representation of speech
+      "spoken"
+      | 
+        ## representation of thought, e.g. internal monologue
+        "thought"
+      | 
+        ## quotation from a written source
+        "written"
+      | 
+        ## authorial distance
+        "soCalled"
+      | 
+        ## (foreign words) 
+        "foreign"
+      | 
+        ## (linguistically distinct) 
+        "distinct"
+      | 
+        ## (technical term) 
+        "term"
+      | 
+        ## (rhetorically emphasized) 
+        "emph"
+      | 
+        ## refering to itself, not its normal referant
+        "mentioned"
+      | xsd:Name
+    }?,
+    empty
+  }
+cit =
+  
+  ## (cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example.  [3.3.3.  4.3.1.  9.3.5.1. ]
+  element cit {
+    (model.qLike
+     | model.egLike
+     | model.biblLike
+     | model.ptrLike
+     | model.global
+     | model.entryPart)+,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    empty
+  }
+desc =
+  
+  ## (description) contains a brief description of the object documented by its parent element, including its intended usage, purpose, or application where this is appropriate. [22.4.4.  22.4.5.  22.4.6.  22.4.7. ]
+  element desc {
+    macro.limitedContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+gloss =
+  
+  ## identifies a phrase or word used to provide a gloss or definition for some other word or phrase. [3.3.4. ]
+  element gloss {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    att.pointing.attribute.target,
+    empty
+  }
+term =
+  
+  ## contains a single-word, multi-word, or symbolic designation which is regarded as a technical term. [3.3.4. ]
+  element term {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.pointing.attribute.target,
+    att.typed.attributes,
+    att.canonical.attributes,
+    att.sortable.attributes,
+    empty
+  }
+sic =
+  
+  ## (Latin for thus or so) contains text reproduced although apparently incorrect or inaccurate. [3.4.1. ]
+  element sic {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.responsibility.attributes,
+    empty
+  }
+corr =
+  
+  ## (correction) contains the correct form of a passage apparently erroneous in the copy text. [3.4.1. ]
+  element corr {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.editLike.attribute.evidence,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.typed.attributes,
+    empty
+  }
+choice =
+  
+  ## groups a number of alternative encodings for the same point in a text. [3.4. ]
+  element choice {
+    (model.choicePart | choice)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    empty
+  }
+orig =
+  
+  ## (original form) contains a reading which is marked as following the original, rather than being normalized or corrected. [3.4.2.  12. ]
+  element orig {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.responsibility.attributes,
+    empty
+  }
+gap =
+  
+  ## (gap) indicates a point where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible. [3.4.3. ]
+  element gap {
+    (model.descLike | model.certLike)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.dimensions.attribute.unit,
+    att.dimensions.attribute.quantity,
+    att.dimensions.attribute.extent,
+    att.dimensions.attribute.precision,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    
+    ## gives the reason for omission. Sample values include sampling, inaudible, irrelevant, cancelled.
+    attribute reason {
+      list { data.word+ }
+    }?,
+    empty
+  }
+add =
+  
+  ## (addition) contains letters, words, or phrases inserted in the text by an author, scribe, annotator, or corrector. [3.4.3. ]
+  element add {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.transcriptional.attribute.cause,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.typed.attribute.type,
+    empty
+  }
+del =
+  
+  ## (deletion) contains a letter, word, or passage deleted, marked as deleted, or otherwise indicated as superfluous or spurious in the copy text by an author, scribe, annotator, or corrector. [3.4.3. ]
+  element del {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.typed.attributes,
+    empty
+  }
+name =
+  
+  ## (name, proper noun) contains a proper noun or noun phrase. [3.5.1. ]
+  element name {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.datable.attribute.calendar,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.typed.attributes,
+    empty
+  }
+rs =
+  
+  ## (referencing string) contains a general purpose name or referring string. [13.2.1.  3.5.1. ]
+  element rs {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attributes,
+    empty
+  }
+address =
+  
+  ## contains a postal address, for example of a publisher, an organization, or an individual. [3.5.2.  2.2.4.  3.11.2.3. ]
+  element address {
+    (model.global*, (model.addrPart, model.global*)+),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+addrLine =
+  
+  ## (address line) contains one line of a postal address. [3.5.2.  2.2.4.  3.11.2.3. ]
+  element addrLine {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+num =
+  
+  ## (number) contains a number, written in any form. [3.5.3. ]
+  element num {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.ranging.attribute.min,
+    att.ranging.attribute.max,
+    
+    ## indicates the type of numeric value.
+    ## Suggested values include: 1] cardinal; 2] ordinal; 3] fraction; 4] percentage
+    attribute type {
+      
+      ## absolute number, e.g. 21, 21.5
+      "cardinal"
+      | 
+        ## ordinal number, e.g. 21st
+        "ordinal"
+      | 
+        ## fraction, e.g. one half or three-quarters
+        "fraction"
+      | 
+        ## a percentage
+        "percentage"
+      | xsd:Name
+    }?,
+    
+    ## supplies the value of the number in standard form.
+    attribute value { data.numeric }?,
+    empty
+  }
+date =
+  
+  ## contains a date in any format. [3.5.4.  2.2.4.  2.5.  3.11.2.3.  15.2.3.  13.3.6. ]
+  element date {
+    (text | model.gLike | model.phrase | model.global)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.datable.attribute.calendar,
+    att.datable.attribute.period,
+    att.datable.w3c.attribute.when,
+    att.datable.w3c.attribute.notBefore,
+    att.datable.w3c.attribute.notAfter,
+    att.datable.w3c.attribute.from,
+    att.datable.w3c.attribute.to,
+    att.dimensions.attribute.unit,
+    att.dimensions.attribute.precision,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.typed.attributes,
+    empty
+  }
+abbr =
+  
+  ## (abbreviation) contains an abbreviation of any sort. [3.5.5. ]
+  element abbr {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.responsibility.attributes,
+    att.typed.attribute.type,
+    empty
+  }
+expan =
+  
+  ## (expansion) contains the expansion of an abbreviation. [3.5.5. ]
+  element expan {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.dimensions.attribute.precision,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    empty
+  }
+ptr =
+  
+  ## (pointer) defines a pointer to another location. [3.6.  16.1. ]
+  element ptr {
+    empty
+    >> sch:pattern [
+         id = "ptr-constraint-ptrAtts"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:ptr"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@target and @cRef"
+             "Only one of the\x{a}" ~
+             "attributes @target and @cRef may be supplied on "
+             sch:name [ ]
+             "."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.pointing.attribute.target,
+    att.typed.attribute.type,
+    empty
+  }
+ref =
+  
+  ## (reference) defines a reference to another location, possibly modified by additional text or comment. [3.6.  16.1. ]
+  element ref {
+    macro.paraContent
+    >> sch:pattern [
+         id = "ref-constraint-refAtts"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:ref"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@target and @cRef"
+             "Only one of the\x{a}" ~
+             "	attributes @target' and @cRef' may be supplied on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.pointing.attribute.target,
+    att.typed.attribute.type,
+    empty
+  }
+\list =
+  
+  ## (list) contains any sequence of items organized as a list. [3.7. ]
+  element list {
+    ((model.divTop | model.global)*,
+     ((item, model.global*)+ | (model.global*, item, model.global*)+),
+     (model.divBottom, model.global*)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.sortable.attributes,
+    
+    ## describes the form of the list.
+    ## Suggested values include: 1] ordered; 2] bulleted; 3] simple; 4] gloss
+    [ a:defaultValue = "simple" ]
+    attribute type {
+      
+      ## list items are numbered or lettered. 
+      "ordered"
+      | 
+        ## list items are marked with a bullet or other typographic device. 
+        "bulleted"
+      | 
+        ## list items are not numbered or bulleted. 
+        "simple"
+      | 
+        ## each list item glosses some term or concept, which is given by a label element preceding the list item.
+        "gloss"
+      | xsd:Name
+    }?,
+    empty
+  }
+item =
+  
+  ## contains one component of a list. [3.7.  2.5. ]
+  element item {
+    macro.specialPara,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.sortable.attributes,
+    empty
+  }
+head =
+  
+  ## (heading) contains any type of heading, for example the title of a section, or the heading of a list, glossary, manuscript description, etc. [4.2.1. ]
+  element head {
+    (text
+     | lg
+     | model.gLike
+     | model.phrase
+     | model.inter
+     | model.lLike
+     | model.global)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    empty
+  }
+note =
+  
+  ## contains a note or annotation. [3.8.1.  2.2.6.  3.11.2.7.  9.3.5.4. ]
+  element note {
+    macro.specialPara,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.pointing.attribute.target,
+    att.responsibility.attributes,
+    att.typed.attribute.type,
+    empty
+  }
+lb =
+  
+  ## (line break) marks the start of a new (typographic) line in some edition or version of a text. [3.10.3.  7.2.5. ]
+  element lb {
+    empty,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    empty
+  }
+author =
+  
+  ## in a bibliographic reference, contains the name(s) of an author, personal or corporate, of a work; for example in the same form as that provided by a recognized bibliographic name authority.  [3.11.2.2.  2.2.1. ]
+  element author {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.naming.attributes,
+    empty
+  }
+editor =
+  
+  ## contains a secondary statement of responsibility for a bibliographic item, for example the name of an individual, institution or organization, (or of several such) acting as editor, compiler, translator, etc.  [3.11.2.2. ]
+  element editor {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.naming.attributes,
+    empty
+  }
+respStmt =
+  
+  ## (statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2.  2.2.1.  2.2.2.  2.2.5. ]
+  element respStmt {
+    ((resp+, model.nameLike.agent+) | (model.nameLike.agent+, resp+)),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+resp =
+  
+  ## (responsibility) contains a phrase describing the nature of a person's intellectual responsibility, or an organization's role in the production or distribution of a work. [3.11.2.2.  2.2.1.  2.2.2.  2.2.5. ]
+  element resp {
+    macro.phraseSeq.limited,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.canonical.attributes,
+    empty
+  }
+title =
+  
+  ## contains a title for any kind of work. [3.11.2.2.  2.2.1.  2.2.5. ]
+  element title {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.canonical.attributes,
+    att.typed.attribute.subtype,
+    
+    ## classifies the title according to some convenient typology.
+    ## Sample values include: 1] main; 2] sub(subordinate) ; 3] alt(alternate) ; 4] short; 5] desc(descriptive) 
+    attribute type { data.enumerated }?,
+    
+    ## indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.
+    attribute level {
+      
+      ## (analytic) analytic title (article, poem, or other item published as part of a larger item) 
+      "a"
+      | 
+        ## (monographic) monographic title (book, collection, or other item published as a distinct item, including single volumes of multi-volume works) 
+        "m"
+      | 
+        ## (journal) journal title 
+        "j"
+      | 
+        ## (series) series title 
+        "s"
+      | 
+        ## (unpublished) title of unpublished material (including theses and dissertations unless published by a commercial press)
+        "u"
+    }?,
+    empty
+  }
+publisher =
+  
+  ## provides the name of the organization responsible for the publication or distribution of a bibliographic item. [3.11.2.3.  2.2.4. ]
+  element publisher {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+biblScope =
+  
+  ## (scope of bibliographic reference) defines the scope of a bibliographic reference, for example as a list of page numbers, or a named subdivision of a larger work. [3.11.2.3. ]
+  element biblScope {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.attribute.rendition,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    
+    ## identifies the unit of information conveyed by the element, e.g. columns, pages, volume.
+    ## Suggested values include: 1] vol(volume) ; 2] issue; 3] pp(pages) ; 4] ll (lines) ; 5] chap(chapter) ; 6] part
+    attribute unit {
+      
+      ## (volume) the element contains a volume number.
+      "vol"
+      | 
+        ## the element contains an issue number, or volume and issue numbers.
+        "issue"
+      | 
+        ## (pages) the element contains a page number or page range.
+        "pp"
+      | 
+        ##  (lines) the element contains a line number or line range.
+        "ll"
+      | 
+        ## (chapter) the element contains a chapter indication (number and/or title)
+        "chap"
+      | 
+        ## the element identifies a part of a book or collection.
+        "part"
+      | xsd:Name
+    }?,
+    
+    ## identifies the type of information conveyed by the element, e.g. columns, pages, volume.
+    ## Suggested values include: 1] vol(volume) ; 2] issue; 3] pp(pages) ; 4] ll (lines) ; 5] chap(chapter) ; 6] part
+    attribute type {
+      
+      ## (volume) the element contains a volume number.
+      "vol"
+      | 
+        ## the element contains an issue number, or volume and issue numbers.
+        "issue"
+      | 
+        ## (pages) the element contains a page number or page range.
+        "pp"
+      | 
+        ##  (lines) the element contains a line number or line range.
+        "ll"
+      | 
+        ## (chapter) the element contains a chapter indication (number and/or title)
+        "chap"
+      | 
+        ## the element identifies a part of a book or collection.
+        "part"
+      | xsd:Name
+    }?,
+    
+    ## specifies the starting point of the range of units indicated by the unit attribute.
+    attribute from { data.word }?,
+    
+    ## specifies the end-point of the range of units indicated by the unit attribute.
+    attribute to { data.word }?,
+    empty
+  }
+citedRange =
+  
+  ##  (cited range) defines the range of cited content, often represented by pages or other units [3.11.2.3. ]
+  element citedRange {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.pointing.attribute.target,
+    
+    ## identifies the type of information conveyed by the element, e.g. columns, pages, volume.
+    ## Suggested values include: 1] vol (volume) ; 2] issue; 3] pp (pages) ; 4] ll (lines) ; 5] chap (chapter) ; 6] part
+    attribute unit {
+      
+      ##  (volume) the element contains a volume number.
+      "vol"
+      | 
+        ## the element contains an issue number, or volume and issue numbers.
+        "issue"
+      | 
+        ##  (pages) the element contains a page number or page range.
+        "pp"
+      | 
+        ##  (lines) the element contains a line number or line range.
+        "ll"
+      | 
+        ##  (chapter) the element contains a chapter indication (number and/or title)
+        "chap"
+      | 
+        ## the element identifies a part of a book or collection.
+        "part"
+      | xsd:Name
+    }?,
+    
+    ## specifies the starting point of the range of units indicated by the unit attribute.
+    attribute from { data.word }?,
+    
+    ## specifies the end-point of the range of units indicated by the unit attribute.
+    attribute to { data.word }?,
+    empty
+  }
+bibl =
+  
+  ## (bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged.  [3.11.1.  2.2.7.  15.3.2. ]
+  element bibl {
+    (text
+     | model.gLike
+     | model.highlighted
+     | model.pPart.data
+     | model.pPart.edit
+     | model.segLike
+     | model.ptrLike
+     | model.biblPart
+     | model.global)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.attribute.rendition,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    att.sortable.attributes,
+    empty
+  }
+listBibl =
+  
+  ## (citation list) contains a list of bibliographic citations of any kind.  [3.11.1.  2.2.7.  15.3.2. ]
+  element listBibl {
+    (model.headLike*,
+     (model.biblLike | model.milestoneLike | listBibl)+),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.sortable.attributes,
+    att.typed.attribute.type,
+    empty
+  }
+l =
+  
+  ## (verse line) contains a single, possibly incomplete, line of verse. [3.12.1.  3.12.  7.2.5. ]
+  element l {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.metrical.attribute.met,
+    empty
+  }
+lg =
+  
+  ## (line group) contains one or more verse lines functioning as a formal unit, e.g. a stanza, refrain, verse paragraph, etc. [3.12.1.  3.12.  7.2.5. ]
+  element lg {
+    ((model.divTop | model.global)*,
+     (model.lLike | model.stageLike | model.labelLike | lg),
+     (model.lLike
+      | model.stageLike
+      | model.labelLike
+      | model.global
+      | lg)*,
+     (model.divBottom, model.global*)*)
+    >> sch:pattern [
+         id = "lg-constraint-atleast1oflggapl"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:lg"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test =
+               "count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) > 0"
+             "An lg element\x{a}" ~
+             "        must contain at least one child l, lg or gap element."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.metrical.attribute.met,
+    att.typed.attribute.type,
+    empty
+  }
+teiHeader =
+  
+  ## (TEI Header) supplies the descriptive and declarative information making up an electronic title page prefixed to every TEI-conformant text. [2.1.1.  15.1. ]
+  element teiHeader {
+    (fileDesc, model.teiHeaderPart*, revisionDesc?),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+fileDesc =
+  
+  ## (file description) contains a full bibliographic description of an electronic file. [2.2.  2.1.1. ]
+  element fileDesc {
+    ((titleStmt, editionStmt?, publicationStmt), sourceDesc+),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+titleStmt =
+  
+  ## (title statement) groups information about the title of a work and those responsible for its content. [2.2.1.  2.2. ]
+  element titleStmt {
+    (title+, model.respLike*),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+funder =
+  
+  ## (funding body) specifies the name of an individual, institution, or organization responsible for the funding of a project or text. [2.2.1. ]
+  element funder {
+    macro.phraseSeq.limited,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+editionStmt =
+  
+  ## (edition statement) groups information relating to one edition of a text. [2.2.2.  2.2. ]
+  element editionStmt {
+    (model.pLike+ | (edition, model.respLike*)),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+edition =
+  
+  ## (edition) describes the particularities of one edition of a text. [2.2.2. ]
+  element edition {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+publicationStmt =
+  
+  ## (publication statement) groups information concerning the publication or distribution of an electronic or other text.  [2.2.4.  2.2. ]
+  element publicationStmt {
+    (model.pLike+ | model.publicationStmtPart+),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+authority =
+  
+  ## (release authority) supplies the name of a person or other agency responsible for making a work available, other than a publisher or distributor. [2.2.4. ]
+  element authority {
+    macro.phraseSeq.limited,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+idno =
+  
+  ## (identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4.  2.2.5.  3.11.2.3. ]
+  element idno {
+    (text | model.gLike | idno)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.sortable.attributes,
+    
+    ## categorizes the identifier, for example as an ISBN, Social Security number, etc. 
+    attribute type { data.enumerated }?,
+    empty
+  }
+availability =
+  
+  ## supplies information about the availability of a text, for example any restrictions on its use or distribution, its copyright status, any licence applying to it, etc. [2.2.4. ]
+  element availability {
+    (model.availabilityPart | model.pLike)+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+sourceDesc =
+  
+  ## (source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. ]
+  element sourceDesc {
+    (model.pLike+
+     | (model.biblLike | model.sourceDescPart | model.listLike)+),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+encodingDesc =
+  
+  ## (encoding description) documents the relationship between an electronic text and the source or sources from which it was derived. [2.3.  2.1.1. ]
+  element encodingDesc {
+    (model.encodingDescPart | model.pLike)+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+projectDesc =
+  
+  ## (project description) describes in detail the aim or purpose for which an electronic file was encoded, together with any other relevant information concerning the process by which it was assembled or collected. [2.3.1.  2.3.  15.3.2. ]
+  element projectDesc {
+    model.pLike+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+quotation =
+  
+  ## specifies editorial practice adopted with respect to quotation marks in the original.  [2.3.3.  15.3.2. ]
+  element quotation {
+    (model.pLike*)
+    >> sch:pattern [
+         id = "quotation-constraint-quotationContents"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:quotation"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@marks) and not (tei:p)"
+             "\x{a}" ~
+             "On "
+             sch:name [ ]
+             ", either the @marks attribute should be used, or a paragraph of description provided"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    
+    ## (quotation marks) indicates whether or not quotation marks have been retained as content within the text. 
+    attribute marks {
+      
+      ## no quotation marks have been retained 
+      "none"
+      | 
+        ## some quotation marks have been retained 
+        "some"
+      | 
+        ## all quotation marks have been retained 
+        "all"
+    }?,
+    empty
+  }
+segmentation =
+  
+  ## describes the principles according to which the text has been segmented, for example into sentences, tone-units, graphemic strata, etc. [2.3.3.  15.3.2. ]
+  element segmentation {
+    model.pLike+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+category =
+  
+  ## contains an individual descriptive category, possibly nested within a superordinate category, within a user-defined taxonomy. [2.3.7. ]
+  element category {
+    (((model.descLike | model.glossLike)*),
+     category*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    empty
+  }
+profileDesc =
+  
+  ## (text-profile description) provides a detailed description of non-bibliographic aspects of a text, specifically the languages and sublanguages used, the situation in which it was produced, the participants and their setting. [2.4.  2.1.1. ]
+  element profileDesc {
+    model.profileDescPart*,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+langUsage =
+  
+  ## (language usage) describes the languages, sublanguages, registers, dialects, etc. represented within a text. [2.4.2.  2.4.  15.3.2. ]
+  element langUsage {
+    language+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+language =
+  
+  ## characterizes a single language or sublanguage used within a text. [2.4.2. ]
+  element language {
+    macro.phraseSeq.limited,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    
+    ## (identifier) Supplies a language code constructed as defined in BCP 47 which is used to identify the language documented by this element, and which is referenced by the global xml:lang attribute.
+    attribute ident { data.language },
+    empty
+  }
+revisionDesc =
+  
+  ## (revision description) summarizes the revision history for a file. [2.5.  2.1.1. ]
+  element revisionDesc {
+    (\list | change+),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+change =
+  
+  ## documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.5.  2.4.1. ]
+  element change {
+    macro.specialPara,
+    att.ascribed.attributes,
+    att.datable.w3c.attribute.when,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+TEI =
+  
+  ## (TEI document) contains a single TEI-conformant document, comprising a TEI header and a text, either in isolation or as part of a teiCorpus element. [4.  15.1. ]
+  element TEI {
+    (teiHeader,
+     ((model.resourceLike+, \text?) | \text))
+    >> sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
+    >> sch:ns [
+         prefix = "rng"
+         uri = "http://relaxng.org/ns/structure/1.0"
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    
+    ## specifies the major version number of the TEI Guidelines against which this document is valid.
+    attribute version { data.version }?,
+    empty
+  }
+\text =
+  
+  ## contains a single text of any kind, whether unitary or composite, for example a poem or drama, a collection of essays, a novel, a dictionary, or a corpus sample. [4.  15.1. ]
+  element text {
+    (model.global*,
+     model.global*,
+     (body),
+     model.global*,
+     model.global*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    empty
+  }
+body =
+  
+  ## (text body) contains the whole body of a single unitary text, excluding any front or back matter. [4. ]
+  element body {
+    (model.global*,
+     (model.divTop, (model.global | model.divTop)*)?,
+     (model.divGenLike, (model.global | model.divGenLike)*)?,
+     ((model.divLike, (model.global | model.divGenLike)*)+
+      | (model.div1Like, (model.global | model.divGenLike)*)+
+      | ((model.common, model.global*)+,
+         ((model.divLike, (model.global | model.divGenLike)*)+
+          | (model.div1Like, (model.global | model.divGenLike)*)+)?)),
+     (model.divBottom, model.global*)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+floatingText =
+  
+  ## contains a single text of any kind, whether unitary or composite, which interrupts the text containing it at any point and after which the surrounding text resumes. [4.3.2. ]
+  element floatingText {
+    (model.global*,
+     model.global*,
+     (body),
+     model.global*,
+     model.global*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    empty
+  }
+\div =
+  
+  ## (text division) contains a subdivision of the front, body, or back of a text. [4.1. ]
+  element div {
+    ((model.divTop | model.global)*,
+     ((((model.divLike | model.divGenLike), model.global*)+
+       | ((model.common, model.global*)+,
+          ((model.divLike | model.divGenLike), model.global*)*)),
+      (model.divBottom, model.global*)*)?),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.copyOf,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    empty
+  }
+certainty =
+  
+  ## indicates the degree of certainty associated with some aspect of the text markup.  [21.1.2. ]
+  element certainty {
+    (model.descLike | model.certLike)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.scoping.attribute.target,
+    
+    ## (certainty) signifies the degree of certainty associated with the object pointed to by the certainty element.
+    attribute cert { data.certainty }?,
+    
+    ## indicates more exactly the aspect concerning which certainty is being expressed: specifically, whether the markup is correctly located, whether the correct element or attribute name has been used, or whether the content of the element or attribute is correct, etc.
+    attribute locus {
+      
+      ## uncertainty concerns whether the name of the element or attribute used is correctly applied.
+      "name"
+      | 
+        ## uncertainty concerns whether the start of the element is correctly identified.
+        "start"
+      | 
+        ## uncertainty concerns whether the end of the element is correctly identified.
+        "end"
+      | 
+        ## uncertainty concerns both the start and the end of the element.
+        "location"
+      | 
+        ## uncertainty concerns the content (for an element) or the value (for an attribute)
+        "value"
+    },
+    
+    ## provides an alternative value for the aspect of the markup in question—an alternative generic identifier, transcription, or attribute value, or the identifier of an anchor element (to indicate an alternative starting or ending location). If an assertedValue is given, the confidence level specified by degree applies to the alternative markup specified by assertedValue; if none is given, it applies to the markup in the text.
+    attribute assertedValue { data.pointer | data.name | data.word }?,
+    empty
+  }
+link =
+  
+  ## defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. ]
+  element link {
+    empty
+    >> sch:pattern [
+         id = "link-constraint-linkTargets1"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:link"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@target and @targets"
+             "You may not supply both \x{a}" ~
+             "	@target and @targets on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "link-constraint-linkTargets2"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:link"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@target) and not(@targets)"
+             "You must\x{a}" ~
+             "	supply either @target or @targets on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "link-constraint-linkTargets3"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:link"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test = "contains(@target,' ')"
+             "You must supply at least two\x{a}" ~
+             "values for @target on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.pointing.attribute.target,
+    empty
+  }
+linkGrp =
+  
+  ## (link group) defines a collection of associations or hypertextual links. [16.1. ]
+  element linkGrp {
+    (link | ptr)+,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.pointing.group.attribute.domains,
+    att.pointing.attribute.target,
+    att.typed.attribute.type,
+    empty
+  }
+ab =
+  
+  ## (anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. ]
+  element ab {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+anchor =
+  
+  ## (anchor point) attaches an identifier to a point within a text, whether or not it corresponds with a textual element. [8.4.2.  16.4. ]
+  element anchor {
+    empty,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+seg =
+  
+  ## (arbitrary segment) represents any segmentation of text below the chunk level. [16.3.  6.2.  7.2.5. ]
+  element seg {
+    macro.paraContent,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.global.linking.attribute.next,
+    att.global.linking.attribute.prev,
+    att.typed.attributes,
+    att.responsibility.attribute.resp,
+    empty
+  }
+join =
+  
+  ## identifies a possibly fragmented segment of text, by pointing at the possibly discontiguous elements which compose it. [16.7. ]
+  element join {
+    ((model.descLike | model.certLike)*)
+    >> sch:pattern [
+         id = "join-constraint-joinTargets1"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:join"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@target and @targets"
+             "\x{a}" ~
+             "You may not supply both @target and @targets on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "join-constraint-joinTargets2"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:join"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@target) and not(@targets)"
+             "\x{a}" ~
+             "You must supply either @target or @targets on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "join-constraint-joinTargets3"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:join"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test = "contains(@target,' ')"
+             "\x{a}" ~
+             "You must supply at least two values for @target on "
+             sch:name [ ]
+             "\x{a}" ~
+             "               "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.pointing.attribute.target,
+    
+    ## specifies the name of an element which this aggregation may be understood to represent.
+    attribute result { data.name }?,
+    
+    ## indicates whether the targets to be joined include the entire element indicated (the entire subtree including its root), or just the children of the target (the branches of the subtree).
+    [ a:defaultValue = "root" ]
+    attribute scope {
+      
+      ## the rooted subtrees indicated by the targets attribute are joined, each subtree become a child of the virtual element created by the join
+      "root"
+      | 
+        ## the children of the subtrees indicated by the targets attribute become the children of the virtual element (i.e. the roots of the subtrees are discarded)
+        "branches"
+    }?,
+    empty
+  }
+joinGrp =
+  
+  ## (join group) groups a collection of join elements and possibly pointers. [16.7. ]
+  element joinGrp {
+    (model.glossLike*, (join | ptr)+),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.pointing.group.attribute.domains,
+    att.pointing.attribute.target,
+    
+    ## describes the result of the joins gathered in this collection.
+    attribute result { data.name }?,
+    empty
+  }
+att.global.linking.attribute.corresp =
+  
+  ## (corresponds) points to elements that correspond to the current element in some way.
+  attribute corresp {
+    list { data.pointer+ }
+  }?
+att.global.linking.attribute.synch =
+  
+  ## (synchronous) points to elements that are synchronous with the current element.
+  attribute synch {
+    list { data.pointer+ }
+  }?
+att.global.linking.attribute.sameAs =
+  
+  ## points to an element that is the same as the current element.
+  attribute sameAs { data.pointer }?
+att.global.linking.attribute.copyOf =
+  
+  ## points to an element of which the current element is a copy.
+  attribute copyOf { data.pointer }?
+att.global.linking.attribute.next =
+  
+  ## points to the next element of a virtual aggregate of which the current element is part.
+  attribute next { data.pointer }?
+att.global.linking.attribute.prev =
+  
+  ## (previous) points to the previous element of a virtual aggregate of which the current element is part.
+  attribute prev { data.pointer }?
+att.global.linking.attribute.exclude =
+  
+  ## points to elements that are in exclusive alternation with the current element.
+  attribute exclude {
+    list { data.pointer+ }
+  }?
+att.global.linking.attribute.select =
+  
+  ## selects one or more alternants; if one alternant is selected, the ambiguity or uncertainty is marked as resolved. If more than one alternant is selected, the degree of ambiguity or uncertainty is marked as reduced by the number of alternants not selected.
+  attribute select {
+    list { data.pointer+ }
+  }?
+att.datable.custom.attribute.when-custom =
+  
+  ## supplies the value of a date or time in some standard form.
+  attribute when-custom {
+    list { data.word+ }
+  }?
+att.datable.custom.attribute.notBefore-custom =
+  
+  ## specifies the earliest possible date for the event in some custom standard form.
+  attribute notBefore-custom {
+    list { data.word+ }
+  }?
+att.datable.custom.attribute.notAfter-custom =
+  
+  ## specifies the latest possible date for the event in some custom standard form.
+  attribute notAfter-custom {
+    list { data.word+ }
+  }?
+att.datable.custom.attribute.from-custom =
+  
+  ## indicates the starting point of the period in some standard form.
+  attribute from-custom {
+    list { data.word+ }
+  }?
+att.datable.custom.attribute.to-custom =
+  
+  ## indicates the ending point of the period in some standard form.
+  attribute to-custom {
+    list { data.word+ }
+  }?
+att.datable.custom.attribute.datingPoint =
+  
+  ## supplies a pointer to some location defining a named point in time with reference to which the datable item is understood to have occurred
+  attribute datingPoint { data.pointer }?
+att.datable.custom.attribute.datingMethod =
+  
+  ## supplies a pointer to a calendar element or other means of interpreting the values of the custom dating attributes.
+  attribute datingMethod { data.pointer }?
+model.persNamePart = surname | forename | nameLink | addName
+model.persNamePart_alternation = surname | forename | nameLink | addName
+model.persNamePart_sequence = surname, forename, nameLink, addName
+model.persNamePart_sequenceOptional =
+  surname?, forename?, nameLink?, addName?
+model.persNamePart_sequenceOptionalRepeatable =
+  surname*, forename*, nameLink*, addName*
+model.persNamePart_sequenceRepeatable =
+  surname+, forename+, nameLink+, addName+
+orgName =
+  
+  ## (organization name) contains an organizational name.  [13.2.2. ]
+  element orgName {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.datable.custom.attribute.when-custom,
+    att.editLike.attribute.source,
+    att.personal.attribute.sort,
+    att.naming.attribute.role,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+persName =
+  
+  ## (personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. ]
+  element persName {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.editLike.attribute.source,
+    att.personal.attribute.sort,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+surname =
+  
+  ## contains a family (inherited) name, as opposed to a given, baptismal, or nick name. [13.2.1. ]
+  element surname {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+forename =
+  
+  ## contains a forename, given or baptismal name. [13.2.1. ]
+  element forename {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    empty
+  }
+nameLink =
+  
+  ## (name link) contains a connecting phrase or link used within a name but not regarded as part of it, such as van der or of. [13.2.1. ]
+  element nameLink {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    empty
+  }
+addName =
+  
+  ## (additional name) contains an additional name component, such as a nickname, epithet, or alias, or any other descriptive phrase used within a personal name. [13.2.1. ]
+  element addName {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+placeName =
+  
+  ## contains an absolute or relative place name.  [13.2.3. ]
+  element placeName {
+    macro.phraseSeq,
+    att.editLike.attribute.evidence,
+    att.editLike.attribute.source,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.role,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attributes,
+    empty
+  }
+country =
+  
+  ## (country) contains the name of a geo-political unit, such as a nation, country, colony, or commonwealth, larger than or administratively superior to a region and smaller than a bloc. [13.2.3. ]
+  element country {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    empty
+  }
+region =
+  
+  ## contains the name of an administrative unit such as a state, province, or county, larger than a settlement, but smaller than a country. [13.2.3. ]
+  element region {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attributes,
+    att.typed.attributes,
+    empty
+  }
+district =
+  
+  ## contains the name of any kind of subdivision of a settlement, such as a parish, ward, or other administrative or geographic unit. [13.2.3. ]
+  element district {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attribute.nymRef,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+settlement =
+  
+  ## contains the name of a settlement such as a city, town, or village identified as a single geo-political or administrative unit. [13.2.3. ]
+  element settlement {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.naming.attributes,
+    att.typed.attribute.type,
+    empty
+  }
+offset =
+  
+  ## marks that part of a relative temporal or spatial expression which indicates the direction of the offset between the two place names, dates, or times involved in the expression.  [13.2.3. ]
+  element offset {
+    macro.xtext,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attribute.type,
+    empty
+  }
+geogName =
+  
+  ## (geographical name) identifies a name associated with some geographical feature such as Windrush Valley or Mount Sinai. [13.2.3. ]
+  element geogName {
+    macro.phraseSeq,
+    att.editLike.attribute.source,
+    att.responsibility.attribute.cert,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attributes,
+    empty
+  }
+geogFeat =
+  
+  ## (geographical feature name) contains a common noun identifying some geographical feature contained within a geographic name, such as valley, mount, etc. [13.2.3. ]
+  element geogFeat {
+    macro.xtext,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+affiliation =
+  
+  ## (affiliation) contains an informal description of a person's present or past affiliation with some organization, for example an employer or sponsor. [15.2.2. ]
+  element affiliation {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    empty
+  }
+event =
+  
+  ## (event) contains data relating to any kind of significant event associated with a person, place, or organization.
+  element event {
+    (model.headLike*,
+     (model.pLike+ | model.labelLike+),
+     (model.noteLike | model.biblLike | linkGrp | link)*,
+     event*),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.sameAs,
+    att.datable.w3c.attribute.notBefore,
+    att.datable.w3c.attribute.notAfter,
+    att.dimensions.attribute.precision,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.typed.attribute.type,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.sortable.attributes,
+    
+    ## indicates the location of an event by pointing to a place element
+    attribute where { data.pointer }?,
+    empty
+  }
+floruit =
+  
+  ## contains information about a person's period of activity.
+  element floruit {
+    macro.phraseSeq,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.datable.w3c.attribute.when,
+    att.datable.w3c.attribute.notBefore,
+    att.datable.w3c.attribute.notAfter,
+    att.datable.w3c.attribute.from,
+    att.datable.w3c.attribute.to,
+    att.ranging.attribute.atLeast,
+    att.ranging.attribute.atMost,
+    att.responsibility.attribute.cert,
+    empty
+  }
+listOrg =
+  
+  ## (list of organizations) contains a list of elements, each of which provides information about an identifiable organization.  [13.2.2. ]
+  element listOrg {
+    (model.headLike*,
+     (org | listOrg)+,
+     (listRelation | relationGrp | relation)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+listEvent =
+  
+  ## (list of events) contains a list of descriptions, each of which provides information about an identifiable event. 
+  element listEvent {
+    (model.headLike*,
+     (event | listEvent)+,
+     (relation | relationGrp | listRelation)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+listPerson =
+  
+  ## (list of persons) contains a list of descriptions, each of which provides information about an identifiable person or a group of people, for example the participants in a language interaction, or the people referred to in a historical source.  [13.3.2.  15.2.  2.4.  15.3.2. ]
+  element listPerson {
+    (model.headLike*,
+     (model.personLike | listPerson)+,
+     (relation | listRelation | relationGrp)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+listPlace =
+  
+  ## (list of places) contains a list of places, optionally followed by a list of relationships (other than containment) defined amongst them. 
+  element listPlace {
+    (model.headLike*,
+     (model.placeLike | listPlace)+,
+     (listRelation | relationGrp | relation)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+location =
+  
+  ## defines the location of a place as a set of geographical coordinates, in terms of other named geo-political entities, or as an address.
+  element location {
+    (model.labelLike
+     | model.placeNamePart
+     | model.offsetLike
+     | model.measureLike
+     | model.addressLike
+     | model.noteLike
+     | model.biblLike)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    att.editLike.attribute.evidence,
+    att.editLike.attribute.source,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    empty
+  }
+org =
+  
+  ## (organization) provides information about an identifiable organization such as a business, a tribe, or any other grouping of people. [13.2.2. ]
+  element org {
+    (model.headLike*,
+     (model.pLike*
+      | (model.labelLike
+         | model.nameLike
+         | model.placeLike
+         | model.orgPart)*),
+     (model.noteLike | model.biblLike | linkGrp | link)*,
+     model.personLike*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    att.editLike.attribute.source,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.sortable.attributes,
+    
+    ## specifies a primary role or classification for the organization.
+    attribute role {
+      list { data.word+ }
+    }?,
+    empty
+  }
+listRelation =
+  
+  ## provides information about relationships identified amongst people, places, and organizations, either informally as prose or as formally expressed relation links.  [15.2.2. ]
+  element listRelation {
+    (model.pLike+ | relation+),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+relationGrp =
+  
+  ## (relation group) provides information about relationships identified amongst people, places, and organizations, either informally as prose or as formally expressed relation links.  [15.2.2. ]
+  element relationGrp {
+    (model.pLike+ | relation+),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    att.sortable.attributes,
+    empty
+  }
+person =
+  
+  ## provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a historical source. [15.2.2. ]
+  element person {
+    (model.pLike+ | (model.personPart | model.global)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.dimensions.attribute.extent,
+    att.sortable.attributes,
+    
+    ## specifies a primary role or classification for the person.
+    attribute role {
+      list { data.enumerated+ }
+    }?,
+    empty
+  }
+place =
+  
+  ## contains data about a geographic location
+  element place {
+    (model.headLike*,
+     (model.pLike*
+      | (model.labelLike
+         | model.placeStateLike
+         | model.placeEventLike)*),
+     (model.noteLike | model.biblLike | idno | linkGrp | link)*,
+     (model.placeLike | listPlace)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attributes,
+    att.editLike.attribute.evidence,
+    att.editLike.attribute.source,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.sortable.attributes,
+    empty
+  }
+relation =
+  
+  ## (relationship) describes any kind of relationship or linkage amongst a specified group of objects, places, events or people. [15.2.2. ]
+  element relation {
+    (desc?)
+    >> sch:pattern [
+         id = "relation-constraint-activemutual"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:relation"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@active and @mutual"
+             "Only one of the attributes\x{a}" ~
+             "@active and @mutual may be supplied"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "relation-constraint-activepassive"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:relation"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "@passive and not(@active)"
+             "the attribute 'passive'\x{a}" ~
+             "	may be supplied only if the attribute 'active' is\x{a}" ~
+             "	supplied"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.editLike.attribute.source,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.canonical.attributes,
+    
+    ## categorizes the relationship in some respect, e.g. as social, personal or other.
+    ## Suggested values include: 1] social; 2] personal; 3] other
+    [ a:defaultValue = "personal" ]
+    attribute type {
+      
+      ## relationship concerned with social roles
+      "social"
+      | 
+        ## relationship concerned with personal roles, e.g. kinship, marriage, etc.
+        "personal"
+      | 
+        ## other kinds of relationship
+        "other"
+      | xsd:Name
+    }?,
+    
+    ## supplies a name for the kind of relationship of which this is an instance.
+    attribute name { data.enumerated },
+    empty
+  }
+state =
+  
+  ## contains a description of some status or quality attributed to a person, place, or organization often at some specific time or for a specific date range.
+  element state {
+    (state+
+     | (model.headLike*,
+        model.pLike+,
+        (model.noteLike | model.biblLike)*)
+     | (model.labelLike | model.noteLike | model.biblLike)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.datable.w3c.attribute.notBefore,
+    att.datable.w3c.attribute.notAfter,
+    att.datable.w3c.attribute.from,
+    att.editLike.attribute.evidence,
+    att.editLike.attribute.source,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.typed.attribute.type,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    empty
+  }
+terrain =
+  
+  ## contains information about the physical terrain of a place.
+  element terrain {
+    (model.headLike*,
+     (model.pLike+ | model.labelLike+),
+     (model.noteLike | model.biblLike)*,
+     terrain*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.editLike.attribute.evidence,
+    att.editLike.attribute.source,
+    att.dimensions.attribute.precision,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+trait =
+  
+  ## contains a description of some status or quality attributed to a person, place, or organization typically, but not necessarily, independent of the volition or action of the holder and usually not at some specific time or for a specific date range.
+  element trait {
+    (trait+
+     | (model.headLike*,
+        model.pLike+,
+        (model.noteLike | model.biblLike)*)
+     | (model.labelLike | model.noteLike | model.biblLike)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.editLike.attribute.source,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    att.canonical.attribute.key,
+    att.canonical.attribute.ref,
+    att.typed.attribute.type,
+    empty
+  }
+nym =
+  
+  ## (canonical name) contains the definition for a canonical name or name component of any kind. [13.3.5. ]
+  element nym {
+    (model.entryPart*, model.pLike*, nym*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+listNym =
+  
+  ## (list of canonical names) contains a list of nyms, that is, standardized names for any thing.  [13.3.5. ]
+  element listNym {
+    (model.headLike*,
+     (nym | listNym)+,
+     (listRelation | relationGrp | relation)*),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.typed.attribute.type,
+    att.sortable.attributes,
+    empty
+  }
+att.datable.iso.attribute.when-iso =
+  
+  ## supplies the value of a date or time in a standard form.
+  attribute when-iso { data.temporal.iso }?
+att.datable.iso.attribute.notBefore-iso =
+  
+  ## specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notBefore-iso { data.temporal.iso }?
+att.datable.iso.attribute.notAfter-iso =
+  
+  ## specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.
+  attribute notAfter-iso { data.temporal.iso }?
+att.datable.iso.attribute.from-iso =
+  
+  ## indicates the starting point of the period in standard form.
+  attribute from-iso { data.temporal.iso }?
+att.datable.iso.attribute.to-iso =
+  
+  ## indicates the ending point of the period in standard form.
+  attribute to-iso { data.temporal.iso }?
+model.rdgLike = rdg
+app =
+  
+  ## (apparatus entry) contains one entry in a critical apparatus, with an optional lemma and usually one or more reading or a note on the relevant passage. [12.1.1. ]
+  element app {
+    (model.global*,
+     (lem, model.global*, model.global*)?,
+     ((model.rdgLike, model.global*, model.global*)
+      | (model.global*, model.global*))*)
+    >> sch:pattern [
+         id = "app-constraint-only1lem"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:app"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test =
+               "count( descendant::tei:lem[ generate-id(    current() ) = generate-id(    ancestor::tei:app[1] ) ]) <       2"
+             "\x{a}" ~
+             "Only one <lem> element may appear within a single  apparatus\x{a}" ~
+             "entry, whether it appears outside a <rdgGrp>\x{a}" ~
+             "element or within it."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.global.linking.attribute.sameAs,
+    
+    ## classifies the variation contained in this element according to some convenient typology.
+    attribute type { data.enumerated }?,
+    
+    ## (location) indicates the location of the variation, when the location-referenced method of apparatus markup is used.
+    attribute loc {
+      list { data.word+ }
+    }?,
+    empty
+  }
+listApp =
+  
+  ## (list of apparatus entries) contains a list of apparatus entries.  [12.2. ]
+  element listApp {
+    (model.headLike*, (app | listApp)+),
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.sortable.attributes,
+    att.typed.attributes,
+    empty
+  }
+lem =
+  
+  ## (lemma) contains the lemma, or base text, of a textual variation. [12.1. ]
+  element lem {
+    (text
+     | model.gLike
+     | model.phrase
+     | model.inter
+     | model.global
+     | model.rdgPart)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.textCritical.attribute.type,
+    att.textCritical.attribute.varSeq,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    empty
+  }
+rdg =
+  
+  ## (reading) contains a single reading within a textual variation. [12.1. ]
+  element rdg {
+    (text
+     | model.gLike
+     | model.phrase
+     | model.inter
+     | model.global
+     | model.rdgPart)*,
+    att.global.attribute.xmlid,
+    att.global.attribute.n,
+    att.global.attribute.xmllang,
+    att.global.linking.attribute.corresp,
+    att.textCritical.attribute.type,
+    att.textCritical.attribute.varSeq,
+    att.responsibility.attribute.cert,
+    att.responsibility.attribute.resp,
+    empty
+  }
+model.rdgPart = notAllowed
+att.textCritical.attribute.type =
+  
+  ## classifies the reading according to some useful typology.
+  ## Sample values include: 1] substantive; 2] orthographic
+  attribute type { data.enumerated }?
+att.textCritical.attribute.varSeq =
+  
+  ## (variant sequence) provides a number indicating the position of this reading in a sequence, when there is reason to presume a sequence to the variants on any one lemma.
+  attribute varSeq { data.count }?
+att.metrical.attribute.met =
+  
+  ## (metrical structure, conventional) contains a user-specified encoding for the conventional metrical structure of the element.
+  attribute met { xsd:token }?
+att.metrical.attribute.real =
+  
+  ## (metrical structure, realized) contains a user-specified encoding for the actual realization of the conventional metrical structure applicable to the element.
+  attribute real { xsd:token }?
+att.metrical.attribute.rhyme =
+  
+  ## (rhyme scheme) specifies the rhyme scheme applicable to a group of verse lines.
+  attribute rhyme { xsd:token }?
+caesura =
+  
+  ## marks the point at which a metrical line may be divided. [6.2. ]
+  element caesura {
+    empty,
+    att.global.attribute.xmlid,
+    att.global.attribute.xmllang,
+    empty
+  }
+start = TEI

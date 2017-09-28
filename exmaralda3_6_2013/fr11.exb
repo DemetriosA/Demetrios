@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) http://www.rrz.uni-hamburg.de/exmaralda -->
+<basic-transcription>
+<head>
+<meta-information><project-name></project-name><transcription-name></transcription-name><referenced-file url=""/><ud-meta-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>X</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0"/>
+<tli id="T34"/>
+<tli id="T33"/>
+<tli id="T32"/>
+<tli id="T31"/>
+<tli id="T30"/>
+<tli id="T29"/>
+<tli id="T28"/>
+<tli id="T27"/>
+<tli id="T26"/>
+<tli id="T25"/>
+<tli id="T24"/>
+<tli id="T23"/>
+<tli id="T22"/>
+<tli id="T21"/>
+<tli id="T20"/>
+<tli id="T19"/>
+<tli id="T18"/>
+<tli id="T17"/>
+<tli id="T16"/>
+<tli id="T15"/>
+<tli id="T14"/>
+<tli id="T13"/>
+<tli id="T12"/>
+<tli id="T11"/>
+<tli id="T10"/>
+<tli id="T9"/>
+<tli id="T8"/>
+<tli id="T7"/>
+<tli id="T6"/>
+<tli id="T5"/>
+<tli id="T4"/>
+<tli id="T3"/>
+<tli id="T2"/>
+<tli id="T1"/>
+</common-timeline>
+<tier id="TIE0" speaker="SPK0" category="v" type="t" display-name="Athen 7. § 56 (Kaibel) [v]"><event start="T0" end="T34">καὶ</event>
+<event start="T34" end="T33"> περὶ</event>
+<event start="T33" end="T32"> τὸν</event>
+<event start="T32" end="T31"> Εὐλέα </event>
+<event start="T31" end="T30">δὲ</event>
+<event start="T30" end="T29"> ποταμὸν</event>
+<event start="T29" end="T28"> (οὗ </event>
+<event start="T28" end="T27">μνημονεύει</event>
+<event start="T27" end="T26"> Ἀντίμαχος</event>
+<event start="T26" end="T25"> ἐν </event>
+<event start="T25" end="T24">ταῖς </event>
+<event start="T24" end="T23">ἐπιγραφομέναις</event>
+<event start="T23" end="T22"> Δέλτοις</event>
+<event start="T22" end="T21"> οὕτως</event>
+<event start="T21" end="T20">·   </event>
+<event start="T20" end="T19">ἐλθὼν</event>
+<event start="T19" end="T18"> Εὐλῆος</event>
+<event start="T18" end="T17"> πηγὰς</event>
+<event start="T17" end="T16"> ἔπι </event>
+<event start="T16" end="T15">δινήεντος) / </event>
+<event start="T15" end="T14"> Δημήτριος</event>
+<event start="T14" end="T13"> [δ']</event>
+<event start="T13" end="T12"> ὁ</event>
+<event start="T12" end="T11"> Σκήψιος</event>
+<event start="T11" end="T10"> ἐν </event>
+<event start="T10" end="T9">ἑκκαιδεκάτῃ</event>
+<event start="T9" end="T8"> τοῦ </event>
+<event start="T8" end="T7">Τρωικοῦ </event>
+<event start="T7" end="T6">διακόσμου </event>
+<event start="T6" end="T5">ἐγχέλεις</event>
+<event start="T5" end="T4"> φησὶ </event>
+<event start="T4" end="T3">διαφόρους </event>
+<event start="T3" end="T2">γίνεσθαι</event>
+<event start="T2" end="T1">. </event>
+</tier><tier id="TIE7" speaker="SPK0" category="v" type="t" display-name="     Kaibel: quotations[v]"><event start="T20" end="T19">ἐλθὼν</event>
+<event start="T19" end="T18">Εὐλῆος</event>
+<event start="T18" end="T17">πηγὰς</event>
+<event start="T17" end="T16">ἔπι</event>
+<event start="T16" end="T15">δινήεντος/</event>
+</tier><tier id="TIE1" speaker="SPK0" category="v" type="t" display-name="Fr 11 (Biraschi) &gt; Athen 7.300 d[v]"><event start="T0" end="T34"></event>
+<event start="T34" end="T33">περὶ </event>
+<event start="T33" end="T32">τὸν </event>
+<event start="T32" end="T30">Εὐλέα </event>
+<event start="T30" end="T29">ποταμὸν </event>
+<event start="T29" end="T28">οὗ</event>
+<event start="T28" end="T27"> (μνημονεύει </event>
+<event start="T27" end="T26">Ἀντίμαχος</event>
+<event start="T26" end="T25"> ἐν </event>
+<event start="T25" end="T24">ταῖς </event>
+<event start="T24" end="T23">ἐπιγραφομέναις </event>
+<event start="T23" end="T22">Δέλτοις </event>
+<event start="T22" end="T21"> οὕτως</event>
+<event start="T21" end="T20">· </event>
+<event start="T20" end="T19">"?ἐλθὼν </event>
+<event start="T19" end="T18">Εὐλῆος </event>
+<event start="T18" end="T17">πηγὰς </event>
+<event start="T17" end="T16">ἔπι </event>
+<event start="T16" end="T15">δινήεντοςˀ) </event>
+<event start="T15" end="T14">Δημήτριος</event>
+<event start="T14" end="T13"> [δ᾿] </event>
+<event start="T13" end="T12">ὁ </event>
+<event start="T12" end="T11">Σκήψιος</event>
+<event start="T11" end="T10"> ἐν </event>
+<event start="T10" end="T9">ἑκκαιδεκάτῳ </event>
+<event start="T9" end="T8">τοῦ</event>
+<event start="T8" end="T7"> Τρωϊκοῦ </event>
+<event start="T7" end="T6">διακόσμου</event>
+<event start="T6" end="T5"> ἐγχέλεις </event>
+<event start="T5" end="T4">φησὶ </event>
+<event start="T4" end="T3">διαφόρους</event>
+<event start="T3" end="T2"> γίνεσθαι</event>
+<event start="T2" end="T1">.   </event>
+</tier><tier id="TIE8" speaker="SPK0" category="v" type="t" display-name="     Biraschi: quotations[v]"><event start="T20" end="T19">"ἐλθὼν</event>
+<event start="T19" end="T18">Εὐλῆος </event>
+<event start="T18" end="T17">πηγὰς</event>
+<event start="T17" end="T16">ἔπι</event>
+<event start="T16" end="T15">δινήεντος"</event>
+</tier><tier id="TIE2" speaker="SPK0" category="v" type="t" display-name="Fr. 11 (Gaede) &gt; Athen 7.300 d [v]"><event start="T34" end="T33">περὶ</event>
+<event start="T33" end="T32">τὸν</event>
+<event start="T32" end="T30">Εὐλέα </event>
+<event start="T30" end="T29">ποταμὸν</event>
+<event start="T29" end="T28">οὗ</event>
+<event start="T28" end="T27">μνημονεύει</event>
+<event start="T27" end="T26">Ἀντίμαχος</event>
+<event start="T26" end="T25">ἐν</event>
+<event start="T25" end="T24">ταῖς</event>
+<event start="T24" end="T23">ἐπιγραφομέναις</event>
+<event start="T23" end="T22">Δέλτοις</event>
+<event start="T22" end="T21">οὕτως</event>
+<event start="T21" end="T20">·</event>
+<event start="T20" end="T19">"ἐλθὼν</event>
+<event start="T19" end="T18">Εὐλῆος</event>
+<event start="T18" end="T17">πηγὰς</event>
+<event start="T17" end="T16">ἔπι</event>
+<event start="T16" end="T15">δινήεντος,"</event>
+<event start="T15" end="T13">Δημήτριος</event>
+<event start="T13" end="T12">ὁ</event>
+<event start="T12" end="T11">Σκήψιος</event>
+<event start="T11" end="T10">ἐν</event>
+<event start="T10" end="T9">ἑκκαιδεκάτῳ</event>
+<event start="T9" end="T8">τοῦ</event>
+<event start="T8" end="T7">τρωικοῦ</event>
+<event start="T7" end="T6">διακόσμου</event>
+<event start="T6" end="T5">ἐγχέλεις</event>
+<event start="T5" end="T4">φησὶ</event>
+<event start="T4" end="T3">διαφόρους</event>
+<event start="T3" end="T2">γίνεσθαι</event>
+<event start="T2" end="T1">.</event>
+</tier><tier id="TIE9" speaker="SPK0" category="v" type="t" display-name="     Gaede: quotations[v]"><event start="T20" end="T19">"ἐλθὼν</event>
+<event start="T19" end="T18">Εὐλῆος</event>
+<event start="T18" end="T17">πηγὰς</event>
+<event start="T17" end="T16">ἔπι</event>
+<event start="T16" end="T15">δινήεντος,"</event>
+</tier><tier id="TIE3" speaker="SPK0" category="v" type="t" display-name="Pagani &gt; Athen. 7.300 d [v]"><event start="T15" end="T14">Δημήτριος</event>
+<event start="T14" end="T13"> [δ᾿] </event>
+<event start="T13" end="T12">ὁ</event>
+<event start="T12" end="T11">Σκήψιος</event>
+<event start="T11" end="T10">ἐν</event>
+<event start="T10" end="T9">ἑκκαιδεκάτῳ</event>
+<event start="T9" end="T8">τοῦ</event>
+<event start="T8" end="T7">Τρωϊκοῦ</event>
+<event start="T7" end="T6">διακόσμου</event>
+<event start="T6" end="T5">ἐγχέλεις</event>
+<event start="T5" end="T4">φησὶ</event>
+<event start="T4" end="T3">διαφόρους</event>
+<event start="T3" end="T2">γίνεσθαι</event>
+<event start="T2" end="T1">.</event>
+</tier><tier id="TIE6" speaker="SPK0" category="v" type="t" display-name="AT [v]"></tier><tier id="TIE11" speaker="SPK0" category="v" type="t" display-name="     Changes Gulick [v]"><event start="T0" end="T34">καὶ</event>
+<event start="T34" end="T33"> περὶ</event>
+<event start="T33" end="T32"> τὸν</event>
+<event start="T32" end="T31"> Εὐλέα </event>
+<event start="T31" end="T30">δὲ</event>
+<event start="T30" end="T29"> ποταμὸν</event>
+<event start="T29" end="T28"> (οὗ </event>
+<event start="T28" end="T27">μνημονεύει</event>
+<event start="T27" end="T26"> Ἀντίμαχος</event>
+<event start="T26" end="T25"> ἐν </event>
+<event start="T25" end="T24">ταῖς </event>
+<event start="T24" end="T23">ἐπιγραφομέναις</event>
+<event start="T23" end="T22"> Δέλτοις</event>
+<event start="T22" end="T21"> οὕτως</event>
+<event start="T21" end="T20">·   </event>
+<event start="T20" end="T19">ἐλθὼν</event>
+<event start="T19" end="T18"> Εὐλῆος</event>
+<event start="T18" end="T17"> πηγὰς</event>
+<event start="T17" end="T16"> ἔπι </event>
+<event start="T16" end="T15">δινήεντος) / </event>
+<event start="T15" end="T13"> Δημήτριος</event>
+<event start="T13" end="T12"> ὁ</event>
+<event start="T12" end="T11"> Σκήψιος</event>
+<event start="T11" end="T10"> ἐν </event>
+<event start="T10" end="T9">ἑκκαιδεκάτῃ</event>
+<event start="T9" end="T8"> τοῦ </event>
+<event start="T8" end="T7">Τρωικοῦ </event>
+<event start="T7" end="T6">διακόσμου </event>
+<event start="T6" end="T5">ἐγχέλεις</event>
+<event start="T5" end="T4"> φησὶ </event>
+<event start="T4" end="T3">διαφόρους </event>
+<event start="T3" end="T2">γίνεσθαι</event>
+<event start="T2" end="T1">. </event>
+</tier><tier id="TIE5" speaker="SPK0" category="v" type="t" display-name="     changes Oslon [v]"><event start="T19" end="T18">†εὐλείας†</event>
+<event start="T15" end="T13">Δημήτριος</event>
+<event start="T13" end="T12">ὁ</event>
+<event start="T8" end="T7">Τρωικοῦ</event>
+<event start="T7" end="T6">Διακόσμου</event>
+</tier><tier id="TIE10" speaker="SPK0" category="v" type="t" display-name="     Changes Canfora [v]"><event start="T0" end="T34">καὶ</event>
+<event start="T34" end="T33"> περὶ</event>
+<event start="T33" end="T32"> τὸν</event>
+<event start="T32" end="T31"> Εὐλέα </event>
+<event start="T31" end="T30">δὲ</event>
+<event start="T30" end="T29"> ποταμὸν</event>
+<event start="T29" end="T28"> (οὗ </event>
+<event start="T28" end="T27">μνημονεύει</event>
+<event start="T27" end="T26"> Ἀντίμαχος</event>
+<event start="T26" end="T25"> ἐν </event>
+<event start="T25" end="T24">ταῖς </event>
+<event start="T24" end="T23">ἐπιγραφομέναις</event>
+<event start="T23" end="T22"> Δέλτοις</event>
+<event start="T22" end="T21"> οὕτως</event>
+<event start="T21" end="T20">·   </event>
+<event start="T20" end="T19">ἐλθὼν</event>
+<event start="T19" end="T18"> Εὐλῆος</event>
+<event start="T18" end="T17"> πηγὰς</event>
+<event start="T17" end="T16"> ἔπι </event>
+<event start="T16" end="T15">δινήεντος) / </event>
+<event start="T15" end="T14"> Δημήτριος</event>
+<event start="T14" end="T13"> [δ']</event>
+<event start="T13" end="T12"> ὁ</event>
+<event start="T12" end="T11"> Σκήψιος</event>
+<event start="T11" end="T10"> ἐν </event>
+<event start="T10" end="T9">ἑκκαιδεκάτῃ</event>
+<event start="T9" end="T8"> τοῦ </event>
+<event start="T8" end="T7">Τρωικοῦ </event>
+<event start="T7" end="T6">διακόσμου </event>
+<event start="T6" end="T5">ἐγχέλεις</event>
+<event start="T5" end="T4"> φησὶ </event>
+<event start="T4" end="T3">διαφόρους </event>
+<event start="T3" end="T2">γίνεσθαι</event>
+<event start="T2" end="T1">. </event>
+</tier></basic-body>
+<tierformat-table><timeline-item-format show-every-nth-numbering="1" show-every-nth-absolute="1" absolute-time-format="time" miliseconds-digits="1"/><tier-format tierref="EMPTY"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="COLUMN-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">7</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE11"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE9"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE10"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE8"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE7"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE6"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Bold</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">10</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE5"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE4"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE3"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE2"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE1"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE0"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="EMPTY-EDITOR"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="SUB-ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Right</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">8</property><property name="font-name">Times New Roman</property></tier-format></tierformat-table></basic-transcription>

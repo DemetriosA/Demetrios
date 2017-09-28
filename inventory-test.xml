@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/C:/Users/Simona/Desktop/dsetemplate/texts/editions/TextInventory.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TextInventory xmlns="http://chs.harvard.edu/xmlns/cts/ti" tiversion="">
+    <collection id="">
+        <title xmlns="http://purl.org/dc/elements/1.1/" xml:lang=""></title>
+        <creator xmlns="http://purl.org/dc/elements/1.1/"></creator>
+        <coverage xmlns="http://purl.org/dc/elements/1.1/" xml:lang=""></coverage>
+        <description xmlns="http://purl.org/dc/elements/1.1/" xml:lang=""></description>
+        <rights xmlns="http://purl.org/dc/elements/1.1/" xml:lang=""></rights>
+    </collection>
+    <textgroup urn="">
+        <groupname xml:lang=""></groupname>
+        <work urn="" xml:lang="">
+            <title xml:lang=""></title>
+        </work>
+    </textgroup>
+</TextInventory>

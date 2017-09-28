@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="file:/C:/Users/Simona/Desktop/dsetemplate/texts/editions/TextInventory.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TextInventory xmlns="http://chs.harvard.edu/xmlns/cts/ti" tiversion="4.0">
+    <ctsnamespace abbr="greekLit" ns="chs.harvard.edu/ctsns">
+        <description xml:lang="eng">The "First Thousand Years of Greek" project's inventory of Greek texts.</description>
+    </ctsnamespace>
+    <collection id="greek">  <!-- poetic; latin; etc collections - just organising the stuff -->
+        <title xmlns="http://purl.org/dc/elements/1.1/" xml:lang="">Greek sources</title>
+        <creator xmlns="http://purl.org/dc/elements/1.1/">Simona Stoyanova</creator>
+        <coverage xmlns="http://purl.org/dc/elements/1.1/" xml:lang="">Editions</coverage>
+        <description xmlns="http://purl.org/dc/elements/1.1/" xml:lang="">Collection of all the Greek sources citing Demetrios of Skepsis</description>
+        <rights xmlns="http://purl.org/dc/elements/1.1/" xml:lang="">Texts available for the public; out of copyright</rights>
+    </collection>
+    <textgroup urn="urn:cts:greekLit:tlg4085">  <!-- search Perseus catalogue; otherwise check TLG for greekLit namespace -->
+        <groupname xml:lang="eng">Hesychius</groupname> <!-- more than one in different languages -->
+        <groupname xml:lang="bg">Хезихий</groupname>
+        <work urn="urn:cts:greekLit:tlg4085.tlg002" xml:lang="grc">
+            <title xml:lang="lat">Lexicon Α-Ο</title>
+            <edition urn="urn:cts:greekLit:tlg4085.tlg002.latte">
+                <label xml:lang="lat">Hesychii Alexandrii Lexicon</label>
+                <online docname="f30biraschi.xml"> <!-- used by the automated build process to find it and encode it -->
+                    <validate schema="tei_bare.rng"/>
+                    <namespaceMapping abbreviation="tei" nsURI="http://www.tei-c.org/ns/1.0"/>
+                    <citationMapping>  <!-- equate mark up in the XML with citation schema -->
+                        <citation label="division" scope="/tei:TEI/tei:text/tei:body" xpath="/tei:div[@n='?']"></citation>  <!-- where to start looking; the containing mark up - line, seg etc.; further level - a citation inside this citation -->
+                    </citationMapping>
+                </online>
+            </edition>
+        </work>
+    </textgroup>
+</TextInventory>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tei_bare.rnc" type="application/relax-ng-compact-syntax"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc> 
+      <titleStmt>
+        <title>Persons Authority list for The fragments of Demetrios of Skepsis project</title> 
+      </titleStmt>
+      <publicationStmt>
+        <p>For internal use only</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>generated from the tagged EpiDoc; hand-enriched with LGPN IDs</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  
+  <text>
+    <body>
+      <head>Persons</head>
+        <listPerson>
+          <person xml:id="demetriosskepsis">
+            <persName xml:lang="grc">∆ημήτριος ὁ Σκήψιος</persName> <!-- decide on canonical names -->
+            <floruit>II BC</floruit>
+            <idno type="lgpn">...</idno>
+          </person>
+        </listPerson>
+    </body>
+  </text>
+</TEI>

@@ -1,0 +1,36 @@
+body {background-color: #FFFFCC;
+font-family: "Times New Roman", Times, serif;}
+
+text {display:block;}
+
+/* for the main menu*/
+
+#menu {position:fixed;
+text-align:left;
+}
+
+/* for the navigation menu */
+
+#navigation {position:relative;
+        top:-130px;
+        left: 600px;}
+        
+/* for the alignment of the main content of the pages */
+
+#content {
+    width:40%;
+    height:600px;
+    overflow: scroll;
+    margin-left: 200px;
+    margin-top: -667px;
+    margin-bottom: 100px;
+    border: 1px solid #000000;
+    text-align:left;
+    float:left;
+    padding:0 10px 0 10px;}
+    
+#citation {
+    margin-top: -667px;
+    margin-bottom: 100px;
+    text-align:left;
+}

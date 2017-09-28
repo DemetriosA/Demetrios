@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) http://www.rrz.uni-hamburg.de/exmaralda -->
+<basic-transcription>
+<head>
+<meta-information><project-name></project-name><transcription-name></transcription-name><referenced-file url=""/><ud-meta-information></ud-meta-information><comment></comment><transcription-convention></transcription-convention></meta-information><speakertable><speaker id="SPK0">
+<abbreviation>X</abbreviation>
+<sex value="m"/>
+<languages-used></languages-used>
+<l1></l1>
+<l2></l2>
+<ud-speaker-information>
+</ud-speaker-information>
+<comment></comment>
+</speaker>
+</speakertable></head>
+<basic-body>
+<common-timeline>
+<tli id="T0"/>
+<tli id="T70"/>
+<tli id="T69"/>
+<tli id="T68"/>
+<tli id="T67"/>
+<tli id="T66"/>
+<tli id="T65"/>
+<tli id="T64"/>
+<tli id="T63"/>
+<tli id="T62"/>
+<tli id="T61"/>
+<tli id="T60"/>
+<tli id="T59"/>
+<tli id="T58"/>
+<tli id="T314"/>
+<tli id="T57"/>
+<tli id="T56"/>
+<tli id="T55"/>
+<tli id="T54"/>
+<tli id="T53"/>
+<tli id="T52"/>
+<tli id="T51"/>
+<tli id="T50"/>
+<tli id="T49"/>
+<tli id="T48"/>
+<tli id="T47"/>
+<tli id="T46"/>
+<tli id="T45"/>
+<tli id="T44"/>
+<tli id="T43"/>
+<tli id="T42"/>
+<tli id="T41"/>
+<tli id="T40"/>
+<tli id="T39"/>
+<tli id="T38"/>
+<tli id="T37"/>
+<tli id="T36"/>
+<tli id="T35"/>
+<tli id="T34"/>
+<tli id="T33"/>
+<tli id="T32"/>
+<tli id="T31"/>
+<tli id="T30"/>
+<tli id="T29"/>
+<tli id="T28"/>
+<tli id="T27"/>
+<tli id="T26"/>
+<tli id="T25"/>
+<tli id="T24"/>
+<tli id="T23"/>
+<tli id="T22"/>
+<tli id="T21"/>
+<tli id="T20"/>
+<tli id="T19"/>
+<tli id="T18"/>
+<tli id="T17"/>
+<tli id="T16"/>
+<tli id="T15"/>
+<tli id="T14"/>
+<tli id="T13"/>
+<tli id="T12"/>
+<tli id="T11"/>
+<tli id="T10"/>
+<tli id="T9"/>
+<tli id="T8"/>
+<tli id="T7"/>
+<tli id="T6"/>
+<tli id="T5"/>
+<tli id="T4"/>
+<tli id="T2"/>
+<tli id="T122"/>
+<tli id="T121"/>
+<tli id="T120"/>
+<tli id="T211"/>
+<tli id="T119"/>
+<tli id="T118"/>
+<tli id="T117"/>
+<tli id="T116"/>
+<tli id="T115"/>
+<tli id="T114"/>
+<tli id="T113"/>
+<tli id="T112"/>
+<tli id="T315"/>
+<tli id="T111"/>
+<tli id="T110"/>
+<tli id="T109"/>
+<tli id="T108"/>
+<tli id="T107"/>
+<tli id="T106"/>
+<tli id="T105"/>
+<tli id="T104"/>
+<tli id="T103"/>
+<tli id="T102"/>
+<tli id="T101"/>
+<tli id="T100"/>
+<tli id="T99"/>
+<tli id="T98"/>
+<tli id="T97"/>
+<tli id="T96"/>
+<tli id="T95"/>
+<tli id="T94"/>
+<tli id="T93"/>
+<tli id="T92"/>
+<tli id="T91"/>
+<tli id="T90"/>
+<tli id="T89"/>
+<tli id="T88"/>
+<tli id="T87"/>
+<tli id="T86"/>
+<tli id="T85"/>
+<tli id="T84"/>
+<tli id="T83"/>
+<tli id="T82"/>
+<tli id="T81"/>
+<tli id="T80"/>
+<tli id="T79"/>
+<tli id="T78"/>
+<tli id="T77"/>
+<tli id="T76"/>
+<tli id="T75"/>
+<tli id="T316"/>
+<tli id="T74"/>
+<tli id="T73"/>
+<tli id="T72"/>
+<tli id="T71"/>
+<tli id="T164"/>
+<tli id="T163"/>
+<tli id="T162"/>
+<tli id="T161"/>
+<tli id="T160"/>
+<tli id="T159"/>
+<tli id="T158"/>
+<tli id="T157"/>
+<tli id="T156"/>
+<tli id="T155"/>
+<tli id="T154"/>
+<tli id="T153"/>
+<tli id="T152"/>
+<tli id="T151"/>
+<tli id="T150"/>
+<tli id="T149"/>
+<tli id="T148"/>
+<tli id="T147"/>
+<tli id="T146"/>
+<tli id="T145"/>
+<tli id="T144"/>
+<tli id="T143"/>
+<tli id="T142"/>
+<tli id="T141"/>
+<tli id="T140"/>
+<tli id="T139"/>
+<tli id="T138"/>
+<tli id="T137"/>
+<tli id="T136"/>
+<tli id="T317"/>
+<tli id="T135"/>
+<tli id="T134"/>
+<tli id="T133"/>
+<tli id="T132"/>
+<tli id="T131"/>
+<tli id="T130"/>
+<tli id="T129"/>
+<tli id="T128"/>
+<tli id="T127"/>
+<tli id="T126"/>
+<tli id="T125"/>
+<tli id="T124"/>
+<tli id="T123"/>
+<tli id="T270"/>
+<tli id="T269"/>
+<tli id="T268"/>
+<tli id="T267"/>
+<tli id="T266"/>
+<tli id="T265"/>
+<tli id="T264"/>
+<tli id="T263"/>
+<tli id="T262"/>
+<tli id="T261"/>
+<tli id="T260"/>
+<tli id="T259"/>
+<tli id="T258"/>
+<tli id="T257"/>
+<tli id="T256"/>
+<tli id="T255"/>
+<tli id="T254"/>
+<tli id="T253"/>
+<tli id="T252"/>
+<tli id="T251"/>
+<tli id="T250"/>
+<tli id="T249"/>
+<tli id="T248"/>
+<tli id="T247"/>
+<tli id="T246"/>
+<tli id="T245"/>
+<tli id="T244"/>
+<tli id="T243"/>
+<tli id="T242"/>
+<tli id="T241"/>
+<tli id="T240"/>
+<tli id="T239"/>
+<tli id="T238"/>
+<tli id="T237"/>
+<tli id="T236"/>
+<tli id="T235"/>
+<tli id="T234"/>
+<tli id="T233"/>
+<tli id="T232"/>
+<tli id="T231"/>
+<tli id="T230"/>
+<tli id="T229"/>
+<tli id="T228"/>
+<tli id="T227"/>
+<tli id="T226"/>
+<tli id="T225"/>
+<tli id="T224"/>
+<tli id="T223"/>
+<tli id="T222"/>
+<tli id="T221"/>
+<tli id="T220"/>
+<tli id="T219"/>
+<tli id="T218"/>
+<tli id="T217"/>
+<tli id="T216"/>
+<tli id="T215"/>
+<tli id="T214"/>
+<tli id="T213"/>
+<tli id="T212"/>
+<tli id="T210"/>
+<tli id="T209"/>
+<tli id="T208"/>
+<tli id="T207"/>
+<tli id="T206"/>
+<tli id="T318"/>
+<tli id="T319"/>
+<tli id="T205"/>
+<tli id="T204"/>
+<tli id="T203"/>
+<tli id="T202"/>
+<tli id="T201"/>
+<tli id="T200"/>
+<tli id="T199"/>
+<tli id="T198"/>
+<tli id="T197"/>
+<tli id="T196"/>
+<tli id="T195"/>
+<tli id="T194"/>
+<tli id="T193"/>
+<tli id="T192"/>
+<tli id="T191"/>
+<tli id="T190"/>
+<tli id="T189"/>
+<tli id="T188"/>
+<tli id="T187"/>
+<tli id="T186"/>
+<tli id="T185"/>
+<tli id="T184"/>
+<tli id="T183"/>
+<tli id="T182"/>
+<tli id="T181"/>
+<tli id="T180"/>
+<tli id="T179"/>
+<tli id="T178"/>
+<tli id="T177"/>
+<tli id="T176"/>
+<tli id="T175"/>
+<tli id="T174"/>
+<tli id="T173"/>
+<tli id="T172"/>
+<tli id="T171"/>
+<tli id="T170"/>
+<tli id="T169"/>
+<tli id="T168"/>
+<tli id="T167"/>
+<tli id="T166"/>
+<tli id="T165"/>
+<tli id="T313"/>
+<tli id="T312"/>
+<tli id="T311"/>
+<tli id="T320"/>
+<tli id="T310"/>
+<tli id="T309"/>
+<tli id="T308"/>
+<tli id="T307"/>
+<tli id="T306"/>
+<tli id="T305"/>
+<tli id="T304"/>
+<tli id="T302"/>
+<tli id="T301"/>
+<tli id="T300"/>
+<tli id="T299"/>
+<tli id="T298"/>
+<tli id="T297"/>
+<tli id="T296"/>
+<tli id="T295"/>
+<tli id="T294"/>
+<tli id="T293"/>
+<tli id="T292"/>
+<tli id="T291"/>
+<tli id="T290"/>
+<tli id="T289"/>
+<tli id="T288"/>
+<tli id="T287"/>
+<tli id="T286"/>
+<tli id="T285"/>
+<tli id="T284"/>
+<tli id="T282"/>
+<tli id="T281"/>
+<tli id="T280"/>
+<tli id="T279"/>
+<tli id="T278"/>
+<tli id="T277"/>
+<tli id="T276"/>
+<tli id="T275"/>
+<tli id="T274"/>
+<tli id="T273"/>
+<tli id="T272"/>
+<tli id="T271"/>
+<tli id="T1"/>
+<tli id="T3"/>
+</common-timeline>
+<tier id="TIE5" speaker="SPK0" category="v" type="t" display-name="New Σ Apoll. Rhod. 1.238 [Wendel 1935][v]"><event start="T2" end="T122">Παγασαὶ</event>
+<event start="T122" end="T121">:</event>
+<event start="T121" end="T120">ἀκρωτήριον</event>
+<event start="T120" end="T211">Μαγνησίας</event>
+<event start="T211" end="T119">·</event>
+<event start="T119" end="T118">ὠνομάσθη</event>
+<event start="T118" end="T117">δὲ</event>
+<event start="T117" end="T116">ἀπὸ</event>
+<event start="T116" end="T115">τοῦ</event>
+<event start="T115" end="T114">ἐκεῖ</event>
+<event start="T114" end="T113">πεπῆχθαι</event>
+<event start="T113" end="T112">τὴν</event>
+<event start="T112" end="T315">Ἀργώ</event>
+<event start="T315" end="T111">.</event>
+<event start="T111" end="T110">ὁ</event>
+<event start="T110" end="T109">δὲ</event>
+<event start="T109" end="T102">Σκήψιος</event>
+<event start="T102" end="T101">ἀπὸ</event>
+<event start="T101" end="T100">τοῦ</event>
+<event start="T100" end="T99">πηγαῖς</event>
+<event start="T99" end="T98">περιρρέεσθαι</event>
+<event start="T98" end="T97">τοὺς</event>
+<event start="T97" end="T96">τόπους</event>
+<event start="T96" end="T95">.</event>
+<event start="T95" end="T94">ἔστι</event>
+<event start="T94" end="T93">δὲ</event>
+<event start="T93" end="T92">καὶ</event>
+<event start="T92" end="T91">Παγασαίου</event>
+<event start="T91" end="T90">Ἀπόλλωνος</event>
+<event start="T90" end="T89">ἱερόν</event>
+<event start="T89" end="T88">.</event>
+</tier><tier id="TIE1" speaker="SPK0" category="v" type="t" display-name="Fr 52 (Biraschi) &gt; Σ Apoll. Rhod. 1.238v]"><event start="T2" end="T122">Παγασαὶ</event>
+<event start="T122" end="T121">:</event>
+<event start="T121" end="T120">ἀκρωτήριον</event>
+<event start="T120" end="T211">Μαγνησίας</event>
+<event start="T211" end="T119">·</event>
+<event start="T119" end="T118">ὠνομάσθη</event>
+<event start="T118" end="T117">δὲ</event>
+<event start="T117" end="T116">ἀπὸ</event>
+<event start="T116" end="T115">τοῦ</event>
+<event start="T115" end="T114">ἐκεῖ</event>
+<event start="T114" end="T113">πεπῆχθαι</event>
+<event start="T113" end="T112">τὴν</event>
+<event start="T112" end="T315">Ἀργώ</event>
+<event start="T315" end="T111">.</event>
+<event start="T111" end="T110">ὁ</event>
+<event start="T110" end="T109">δὲ</event>
+<event start="T109" end="T102">Σκήψιος</event>
+<event start="T102" end="T101">ἀπὸ</event>
+<event start="T101" end="T100">τοῦ</event>
+<event start="T100" end="T99">πηγαῖς</event>
+<event start="T99" end="T98">περιρρέεσθαι</event>
+<event start="T98" end="T97">τοὺς</event>
+<event start="T97" end="T96">τόπους</event>
+<event start="T96" end="T95">.</event>
+<event start="T95" end="T94">ἔστι</event>
+<event start="T94" end="T93">δὲ</event>
+<event start="T93" end="T92">καὶ</event>
+<event start="T92" end="T91">Παγασαίου</event>
+<event start="T91" end="T90">Ἀπόλλωνος</event>
+<event start="T90" end="T89">ἱερόν</event>
+<event start="T89" end="T88">.</event>
+</tier><tier id="TIE3" speaker="SPK0" category="v" type="t" display-name="Pagani &gt; Σ Apoll. Rhod. 1.238[v]"><event start="T2" end="T122">Παγασαὶ</event>
+<event start="T122" end="T121">:</event>
+<event start="T121" end="T120">ἀκρωτήριον</event>
+<event start="T120" end="T211">Μαγνησίας</event>
+<event start="T211" end="T119">.</event>
+<event start="T119" end="T118">ὠνομάσθη</event>
+<event start="T118" end="T117">δὲ</event>
+<event start="T117" end="T116">ἀπὸ</event>
+<event start="T116" end="T115">τοῦ</event>
+<event start="T115" end="T114">ἐκεῖ</event>
+<event start="T114" end="T113">πεπῆχθαι</event>
+<event start="T113" end="T112">τὴν</event>
+<event start="T112" end="T315">Ἀργώ</event>
+<event start="T315" end="T111">.</event>
+<event start="T111" end="T110">ὁ</event>
+<event start="T110" end="T109">δὲ</event>
+<event start="T109" end="T102">Σκήψιος</event>
+<event start="T102" end="T101">ἀπὸ</event>
+<event start="T101" end="T100">τοῦ</event>
+<event start="T100" end="T99">πηγαῖς</event>
+<event start="T99" end="T98">περιρρέεσθαι</event>
+<event start="T98" end="T97">τοὺς</event>
+<event start="T97" end="T96">τόπους</event>
+<event start="T96" end="T95">.</event>
+<event start="T95" end="T94">ἔστι</event>
+<event start="T94" end="T93">δὲ</event>
+<event start="T93" end="T92">καὶ</event>
+<event start="T92" end="T91">Παγασαίου</event>
+<event start="T91" end="T90">Ἀπόλλωνος</event>
+<event start="T90" end="T89">ἱερόν</event>
+<event start="T89" end="T88">.</event>
+</tier><tier id="TIE2" speaker="SPK0" category="v" type="t" display-name="Fr 52 (Gaede) &gt; Σ Apoll. Rhod. 1. 238[v]"><event start="T2" end="T121">Παγασαὶ</event>
+<event start="T121" end="T120">ἀκρωτήριον</event>
+<event start="T120" end="T119">Μαγνησίας,</event>
+<event start="T119" end="T118">ὠνομάσθη</event>
+<event start="T118" end="T117">δὲ</event>
+<event start="T117" end="T116">ἀπὸ</event>
+<event start="T116" end="T115">τοῦ</event>
+<event start="T115" end="T114">ἐκεῖ</event>
+<event start="T114" end="T113">πεπῆχθαι</event>
+<event start="T113" end="T112">τὴν</event>
+<event start="T112" end="T315">Ἀργώ</event>
+<event start="T315" end="T111">.</event>
+<event start="T111" end="T110">ὁ</event>
+<event start="T110" end="T109">δὲ</event>
+<event start="T109" end="T102">Σκήψιος</event>
+<event start="T102" end="T101">ἀπὸ </event>
+<event start="T101" end="T100">τοῦ</event>
+<event start="T100" end="T99">πηγαῖς</event>
+<event start="T99" end="T98">περιρρέεσθαι</event>
+<event start="T98" end="T97">τοὺς</event>
+<event start="T97" end="T96">τόπους</event>
+<event start="T96" end="T95">.</event>
+<event start="T95" end="T94">ἔστι</event>
+<event start="T94" end="T93">δὲ</event>
+<event start="T93" end="T92">καὶ</event>
+<event start="T92" end="T91">Παγασαίου</event>
+<event start="T91" end="T90">Ἀπόλλωνος</event>
+<event start="T90" end="T89">ἱερόν</event>
+<event start="T89" end="T88">.</event>
+</tier><tier id="TIE4" speaker="SPK0" category="v" type="t" display-name="  Fr 52 additional (Gaede) &gt; Str. 9, p.436[v]"><event start="T2" end="T121">ἀπὸ</event>
+<event start="T121" end="T120">τῆς</event>
+<event start="T120" end="T119">ναυπηγίας</event>
+<event start="T119" end="T118">τῆς</event>
+<event start="T118" end="T117">Ἀργοῦς</event>
+<event start="T117" end="T116">καὶ</event>
+<event start="T116" end="T115">Παγασὰς </event>
+<event start="T115" end="T114">λέγεσθαι</event>
+<event start="T114" end="T113">μυθεύουσι</event>
+<event start="T113" end="T112"> τὸν </event>
+<event start="T112" end="T111">τόπον,</event>
+<event start="T111" end="T110">οἱ</event>
+<event start="T110" end="T109">δὲ</event>
+<event start="T109" end="T108">πιθανώτερον</event>
+<event start="T108" end="T107">ἡγοῦνται </event>
+<event start="T107" end="T106">τοὔνομα</event>
+<event start="T106" end="T105">τῷ</event>
+<event start="T105" end="T104">τόπῳ</event>
+<event start="T104" end="T103">τεθῆναι</event>
+<event start="T103" end="T102">τοῦτο</event>
+<event start="T102" end="T101">ἀπὸ</event>
+<event start="T101" end="T100">τῶν</event>
+<event start="T100" end="T99">πηγῶν</event>
+<event start="T99" end="T98">αἳ</event>
+<event start="T98" end="T97">πολλαί</event>
+<event start="T97" end="T96">τε</event>
+<event start="T96" end="T95">καὶ</event>
+<event start="T95" end="T94">δαψιλεῖς</event>
+<event start="T94" end="T93">ῥέουσι</event>
+<event start="T93" end="T92">.</event>
+</tier><tier id="TIE0" speaker="SPK0" category="v" type="t" display-name="New Radt &gt; Str. 9.5.15 C 436 [v]"><event start="T0" end="T70"> Ἑξῆς</event>
+<event start="T70" end="T69"> δὲ</event>
+<event start="T69" end="T68"> τοὺς</event>
+<event start="T68" end="T67"> ὑπὸ</event>
+<event start="T67" end="T66"> ⌜τῷ⌝ </event>
+<event start="T66" end="T65">Εὐμήλ⌞ῳ </event>
+<event start="T65" end="T64">κατα⌟λέγει,</event>
+<event start="T64" end="T63"> τὴν </event>
+<event start="T63" end="T62">συνεχῆ</event>
+<event start="T62" end="T61"> παραλίαν,</event>
+<event start="T61" end="T60"> ⌜ἥπερ </event>
+<event start="T60" end="T59">ἐστὶν </event>
+<event start="T59" end="T58">ἤδη</event>
+<event start="T58" end="T314"> Μαγνη⌞των</event>
+<event start="T314" end="T57">[c. 4]⌟</event>
+<event start="T57" end="T56"> καὶ</event>
+<event start="T56" end="T55"> τῆς </event>
+<event start="T55" end="T54">Πελασγιώτιδος</event>
+<event start="T54" end="T53"> γῆς⌝</event>
+<event start="T53" end="T52">.</event>
+<event start="T52" end="T51"> φεραὶ</event>
+<event start="T51" end="T50"> μὲν</event>
+<event start="T50" end="T49"> οὖν </event>
+<event start="T49" end="T48">εἰ⌞σι </event>
+<event start="T48" end="T47">πέρας⌟</event>
+<event start="T47" end="T46"> τῶν</event>
+<event start="T46" end="T45"> Πελασγικῶν</event>
+<event start="T45" end="T44"> πεδίων </event>
+<event start="T44" end="T43">πρὸς</event>
+<event start="T43" end="T42"> τὴν</event>
+<event start="T42" end="T41"> Μαγνησίαν,</event>
+<event start="T41" end="T40"> ἅ⌞⌜[περ]⌝</event>
+<event start="T40" end="T39">παρα⌟τείνει</event>
+<event start="T39" end="T38"> μέχρι</event>
+<event start="T38" end="T37"> ⌜τοῦ⌝ </event>
+<event start="T37" end="T36">Πηλίου </event>
+<event start="T36" end="T35">σταδίους </event>
+<event start="T35" end="T34">ἑκατὸν </event>
+<event start="T34" end="T33">ἑξήκο⌞ντα</event>
+<event start="T33" end="T32">. </event>
+<event start="T32" end="T31">ἐπί⌟νειον </event>
+<event start="T31" end="T30">δὲ</event>
+<event start="T30" end="T29"> τῶν</event>
+<event start="T29" end="T28"> Φερῶν</event>
+<event start="T28" end="T27"> Παγασαὶ </event>
+<event start="T27" end="T26">διέχον </event>
+<event start="T26" end="T25">ἐνενήκοντα </event>
+<event start="T25" end="T24">στ⌞αδίους⌟ </event>
+<event start="T24" end="T23">αὐτῶν,</event>
+<event start="T23" end="T22"> Ἰωλκοῦ</event>
+<event start="T22" end="T21"> δὲ </event>
+<event start="T21" end="T20">⌜εἴκοσι⌝</event>
+<event start="T20" end="T19">.</event>
+<event start="T19" end="T18"> ἡ </event>
+<event start="T18" end="T17">δ’</event>
+<event start="T17" end="T16"> Ἰωλκὸς </event>
+<event start="T16" end="T15">κατέσκαπται </event>
+<event start="T15" end="T14">μ⌞ὲν</event>
+<event start="T14" end="T13"> ἐκ⌟</event>
+<event start="T13" end="T12"> παλαιοῦ,</event>
+<event start="T12" end="T11"> ἐντεῦθεν</event>
+<event start="T11" end="T10"> δ’</event>
+<event start="T10" end="T9"> ἔστειλε</event>
+<event start="T9" end="T8"> τὸν</event>
+<event start="T8" end="T7"> Ἰάσονα </event>
+<event start="T7" end="T6">καὶ</event>
+<event start="T6" end="T5"> τὴν</event>
+<event start="T5" end="T4"> Ἀ⌞ργὼ⌟</event>
+<event start="T4" end="T2"> Πελίας</event>
+<event start="T2" end="T122"> (ἀπὸ</event>
+<event start="T122" end="T121"> δὲ</event>
+<event start="T121" end="T120"> τῆς </event>
+<event start="T120" end="T119">ναυπηγίας</event>
+<event start="T119" end="T118"> τῆς</event>
+<event start="T118" end="T117"> Ἀργοῦς</event>
+<event start="T117" end="T116"> καὶ </event>
+<event start="T116" end="T115">Π⌞αγα⌟σὰς </event>
+<event start="T115" end="T114">λέγεσθαι </event>
+<event start="T114" end="T113">μυθεύουσι</event>
+<event start="T113" end="T112"> τὸν </event>
+<event start="T112" end="T315">τόπον</event>
+<event start="T315" end="T111">· </event>
+<event start="T111" end="T110">οἱ </event>
+<event start="T110" end="T109">δὲ </event>
+<event start="T109" end="T108">πιθανώτερον</event>
+<event start="T108" end="T107"> ἡ⌞γοῦν⌟ται </event>
+<event start="T107" end="T106">τοὔνομα</event>
+<event start="T106" end="T105"> τῷ </event>
+<event start="T105" end="T104">τόπῳ </event>
+<event start="T104" end="T103">τεθῆναι </event>
+<event start="T103" end="T102">τοῦτο</event>
+<event start="T102" end="T101"> ἀπὸ</event>
+<event start="T101" end="T100"> τῶν</event>
+<event start="T100" end="T99"> πηγῶν,</event>
+<event start="T99" end="T98"> α⌞ἵ⌜[περ]⌝⌟</event>
+<event start="T98" end="T97">πολλαί</event>
+<event start="T97" end="T96"> τε</event>
+<event start="T96" end="T95"> καὶ </event>
+<event start="T95" end="T94">δαψιλεῖς</event>
+<event start="T94" end="T93"> ῥέουσι)</event>
+<event start="T93" end="T92">·</event>
+<event start="T92" end="T91"> πλησίον</event>
+<event start="T91" end="T90"> δὲ</event>
+<event start="T90" end="T89"> καὶ </event>
+<event start="T89" end="T88">Ἀφέται,</event>
+<event start="T88" end="T87"> ὡ⌞ς</event>
+<event start="T87" end="T86"> ἂν⌟</event>
+<event start="T86" end="T85"> ἀφετήριόν</event>
+<event start="T85" end="T84"> τι</event>
+<event start="T84" end="T83"> τῶν </event>
+<event start="T83" end="T82">Ἀργοναυτῶν</event>
+<event start="T82" end="T81">.</event>
+<event start="T81" end="T80"> τῆς</event>
+<event start="T80" end="T79"> δὲ </event>
+<event start="T79" end="T78">Δημητ⌞ρι⌟άδος</event>
+<event start="T78" end="T77"> ⌞ἑπτὰ⌟ </event>
+<event start="T77" end="T76">σταδίους </event>
+<event start="T76" end="T75">ὑπέρκειται</event>
+<event start="T75" end="T316"><![CDATA[ <ἁπὸ>]]></event>
+<event start="T316" end="T74">τῆς </event>
+<event start="T74" end="T73">θαλάττης</event>
+<event start="T73" end="T72"> Ἰω⌞λκός</event>
+<event start="T72" end="T71">.</event>
+<event start="T71" end="T164"> ἔ⌟κτι⌞σε⌟</event>
+<event start="T164" end="T163"> δὲ</event>
+<event start="T163" end="T162"> Δημήτριος</event>
+<event start="T162" end="T161"> ὁ </event>
+<event start="T161" end="T160">Πολιορκητὴς </event>
+<event start="T160" end="T159">ἐπώνυμον</event>
+<event start="T159" end="T158"> ⌞ἑαυτοῦ</event>
+<event start="T158" end="T157"> τὴν</event>
+<event start="T157" end="T156"> Δημη⌟τριάδα </event>
+<event start="T156" end="T155">μεταξὺ</event>
+<event start="T155" end="T154"> Νηλείας </event>
+<event start="T154" end="T153">καὶ </event>
+<event start="T153" end="T152">Παγασῶ⌞ν</event>
+<event start="T152" end="T151"> ἐπὶ </event>
+<event start="T151" end="T150">θαλάττῃ</event>
+<event start="T150" end="T149"> τὰς⌟ </event>
+<event start="T149" end="T148">πλησίον </event>
+<event start="T148" end="T147">πολίχνας </event>
+<event start="T147" end="T146">εἰς</event>
+<event start="T146" end="T145"> αὐτὴν </event>
+<event start="T145" end="T144">συνοι⌞κίσας, </event>
+<event start="T144" end="T143">Νήλειάν </event>
+<event start="T143" end="T142">τε⌟</event>
+<event start="T142" end="T141"> καὶ</event>
+<event start="T141" end="T140"> Παγασὰς</event>
+<event start="T140" end="T139"> καὶ</event>
+<event start="T139" end="T138"> Ὀρμένιον,</event>
+<event start="T138" end="T137"> ἔτι</event>
+<event start="T137" end="T136"> δὲ </event>
+<event start="T136" end="T317">Ῥιζο⌞ῦντα</event>
+<event start="T317" end="T135">⌜[ c. 10]⌟⌝</event>
+<event start="T135" end="T134">Σηπιάδα, </event>
+<event start="T134" end="T133">Ὀλιζῶνα,</event>
+<event start="T133" end="T132"> Βοίβην,</event>
+<event start="T132" end="T131"> Ἰωλκόν, </event>
+<event start="T131" end="T130">⌞αἳ</event>
+<event start="T130" end="T129"> δὴ</event>
+<event start="T129" end="T128"> νῦν</event>
+<event start="T128" end="T127"> εἰσι </event>
+<event start="T127" end="T126">κῶμαι ⌟</event>
+<event start="T126" end="T125">τῆς </event>
+<event start="T125" end="T124">Δημητριάδος</event>
+<event start="T124" end="T123">.</event>
+<event start="T123" end="T270">καὶ </event>
+<event start="T270" end="T269">δὴ</event>
+<event start="T269" end="T268"> καὶ </event>
+<event start="T268" end="T267">ναύσταθ⌞μον</event>
+<event start="T267" end="T266"> ἦν </event>
+<event start="T266" end="T265">τοῦτο </event>
+<event start="T265" end="T264">καὶ </event>
+<event start="T264" end="T263">βασί⌟λειον</event>
+<event start="T263" end="T262"> μέχρι</event>
+<event start="T262" end="T261"> πολλοῦ </event>
+<event start="T261" end="T260">τοῖς</event>
+<event start="T260" end="T259"> βασιλεῦσι</event>
+<event start="T259" end="T258"> τ⌞ῶν </event>
+<event start="T258" end="T257">Μακεδόνων, </event>
+<event start="T257" end="T256">ἐπε⌟κράτει</event>
+<event start="T256" end="T255"> δὲ</event>
+<event start="T255" end="T254"> καὶ</event>
+<event start="T254" end="T253"> τῶν</event>
+<event start="T253" end="T252"> Τεμπῶν</event>
+<event start="T252" end="T251"> καὶ</event>
+<event start="T251" end="T250"> τῶ⌞ν</event>
+<event start="T250" end="T249"> ὀρῶν</event>
+<event start="T249" end="T248"> ἀμφοῖν,</event>
+<event start="T248" end="T247"> ⌜[καθά]⌟περ </event>
+<event start="T247" end="T246">εἴρηται⌝,</event>
+<event start="T246" end="T245"> τοῦ</event>
+<event start="T245" end="T244"> τε</event>
+<event start="T244" end="T243"> Πηλίου</event>
+<event start="T243" end="T242"> καὶ </event>
+<event start="T242" end="T241">τῆς</event>
+<event start="T241" end="T240"> ⌞Ὄσσης</event>
+<event start="T240" end="T239">·</event>
+<event start="T239" end="T238"> νῦν </event>
+<event start="T238" end="T237">δὲ </event>
+<event start="T237" end="T236">συνέσταλ⌟ται</event>
+<event start="T236" end="T235"> μέν,</event>
+<event start="T235" end="T234"> τῶν</event>
+<event start="T234" end="T233"> δ’</event>
+<event start="T233" end="T232"> ἐν </event>
+<event start="T232" end="T231">τῇ</event>
+<event start="T231" end="T230"> Μαγνησίᾳ</event>
+<event start="T230" end="T229"> πασ⌞ῶν</event>
+<event start="T229" end="T228"> ὅμως </event>
+<event start="T228" end="T227">διαφέρει</event>
+<event start="T227" end="T226">.</event>
+<event start="T226" end="T225"> ἡ</event>
+<event start="T225" end="T224">δὲ</event>
+<event start="T224" end="T223"> Βοιβηῒς⌟ </event>
+<event start="T223" end="T222">λίμνη </event>
+<event start="T222" end="T221">πλησιάζει</event>
+<event start="T221" end="T220"> μὲν</event>
+<event start="T220" end="T219"> ταῖς</event>
+<event start="T219" end="T218"> Φεραῖς, </event>
+<event start="T218" end="T217">συνάπτει </event>
+<event start="T217" end="T216">⌞δὲ</event>
+<event start="T216" end="T215"> καὶ </event>
+<event start="T215" end="T214">τοῖς⌟ </event>
+<event start="T214" end="T213">ἀπολήγουσι</event>
+<event start="T213" end="T212"> τοῦ</event>
+<event start="T212" end="T210"> Πηλίου </event>
+<event start="T210" end="T209"> καὶ</event>
+<event start="T209" end="T208"> τῆς</event>
+<event start="T208" end="T207"> Μαγνη⌞σίας</event>
+<event start="T207" end="T206">·</event>
+<event start="T206" end="T318"> ἡ </event>
+<event start="T318" end="T319">δὲ </event>
+<event start="T319" end="T205">Β⌟οίβη</event>
+<event start="T205" end="T204">ἐστι</event>
+<event start="T204" end="T203">χωρίον </event>
+<event start="T203" end="T202">ἐπὶ</event>
+<event start="T202" end="T201"> τῇ </event>
+<event start="T201" end="T200">λίμνῃ </event>
+<event start="T200" end="T199">κείμενον</event>
+<event start="T199" end="T198">. </event>
+<event start="T198" end="T197">καθάπερ</event>
+<event start="T197" end="T196"> ⌞δὲ</event>
+<event start="T196" end="T195"> τὴν</event>
+<event start="T195" end="T194"> Ἰωλ⌟κὸν </event>
+<event start="T194" end="T193">αὐξηθεῖσαν</event>
+<event start="T193" end="T192"> ἐπὶ</event>
+<event start="T192" end="T191"> πλέον </event>
+<event start="T191" end="T190">κατέλυσαν </event>
+<event start="T190" end="T189">αἱ </event>
+<event start="T189" end="T188">στά⌞σεις</event>
+<event start="T188" end="T187"> καὶ</event>
+<event start="T187" end="T186"> αἱ ⌟</event>
+<event start="T186" end="T185">τυραννίδες,</event>
+<event start="T185" end="T184"> οὕτω</event>
+<event start="T184" end="T183"> καὶ</event>
+<event start="T183" end="T182"> τὰς</event>
+<event start="T182" end="T181"> Φερὰς </event>
+<event start="T181" end="T180">συνέστειλαν</event>
+<event start="T180" end="T179"> ⌞ἐξαρθείσα⌟ς</event>
+<event start="T179" end="T178"> ποτὲ</event>
+<event start="T178" end="T177"> καὶ </event>
+<event start="T177" end="T176">συγκαταλυθείσας </event>
+<event start="T176" end="T175">τοῖς </event>
+<event start="T175" end="T174">τυράννοις</event>
+<event start="T174" end="T173">. </event>
+<event start="T173" end="T172">⌞πλησίον</event>
+<event start="T172" end="T171"> δὲ⌟</event>
+<event start="T171" end="T170"> τῆς </event>
+<event start="T170" end="T169">Δημητριάδος</event>
+<event start="T169" end="T168"> ὁ</event>
+<event start="T168" end="T167"> Ἄναυρος</event>
+<event start="T167" end="T166"> ῥεῖ</event>
+<event start="T166" end="T165">. </event>
+<event start="T165" end="T313">καλεῖται</event>
+<event start="T313" end="T312"> δὲ</event>
+<event start="T312" end="T311"> ⌞καὶ </event>
+<event start="T311" end="T320"><![CDATA[<ὁ>]]></event>
+<event start="T320" end="T310">συνεχὴς </event>
+<event start="T310" end="T309">αἰγι⌟αλὸς</event>
+<event start="T309" end="T308"> Ἰωλκός</event>
+<event start="T308" end="T307">·</event>
+<event start="T307" end="T306"> ἐνταῦθα</event>
+<event start="T306" end="T305"> δὲ</event>
+<event start="T305" end="T304"> καὶ</event>
+<event start="T304" end="T302"> τὴν </event>
+<event start="T302" end="T301"> ⌞Πυλαϊκ⌟ὴν</event>
+<event start="T301" end="T300"> ⌞πανήγυρ⌟ιν</event>
+<event start="T300" end="T299"> συνετέλουν</event>
+<event start="T299" end="T298">.</event>
+<event start="T298" end="T297"> ὁ</event>
+<event start="T297" end="T296"> δ’</event>
+<event start="T296" end="T295"> Ἀρτεμίδωρος</event>
+<event start="T295" end="T294"> ⌞ἀπωτ⌟έρω </event>
+<event start="T294" end="T293">τῆς </event>
+<event start="T293" end="T292">Δημητριάδος </event>
+<event start="T292" end="T291">τίθησι </event>
+<event start="T291" end="T290">τὸν </event>
+<event start="T290" end="T289">Παγασιτικὸν</event>
+<event start="T289" end="T288"> ⌞κόλπον⌟ </event>
+<event start="T288" end="T287">εἰς</event>
+<event start="T287" end="T286"> τοὺς</event>
+<event start="T286" end="T285"> ὑπὸ </event>
+<event start="T285" end="T284">Φιλοκτήτῃ</event>
+<event start="T284" end="T282"> τόπους,</event>
+<event start="T282" end="T281"> ἐν</event>
+<event start="T281" end="T280"> δὲ</event>
+<event start="T280" end="T279"> τῷ </event>
+<event start="T279" end="T278">⌞κόλπ⌟ῳ </event>
+<event start="T278" end="T277">φησὶν </event>
+<event start="T277" end="T276">εἶναι</event>
+<event start="T276" end="T275"> τὴν </event>
+<event start="T275" end="T274">Κικύνηθον</event>
+<event start="T274" end="T273"> νῆσον </event>
+<event start="T273" end="T272">καὶ </event>
+<event start="T272" end="T271">πολίχνην </event>
+<event start="T271" end="T1">⌞ὁμώνυ⌟μον</event>
+<event start="T1" end="T3">.</event>
+</tier></basic-body>
+<tierformat-table><timeline-item-format show-every-nth-numbering="1" show-every-nth-absolute="1" absolute-time-format="time" miliseconds-digits="1"/><tier-format tierref="EMPTY"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="COLUMN-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">7</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Bold</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">10</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE5"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE4"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE3"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE2"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE1"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="TIE0"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">12</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="EMPTY-EDITOR"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">white</property><property name="chunk-border-style">solid</property><property name="bg-color">lightGray</property><property name="text-alignment">Left</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">2</property><property name="font-name">Times New Roman</property></tier-format><tier-format tierref="SUB-ROW-LABEL"><property name="row-height-calculation">Generous</property><property name="fixed-row-height">10</property><property name="font-face">Plain</property><property name="font-color">black</property><property name="chunk-border-style">solid</property><property name="bg-color">white</property><property name="text-alignment">Right</property><property name="chunk-border-color">#R00G00B00</property><property name="chunk-border"></property><property name="font-size">8</property><property name="font-name">Times New Roman</property></tier-format></tierformat-table></basic-transcription>
